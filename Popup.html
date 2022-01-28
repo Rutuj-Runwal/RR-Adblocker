@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./enable.js"></script>
+    <style>
+        /* Switch css start */
+        * {
+            --switch-height: 20px;
+            --switch-padding: 8px;
+            --switch-width: calc((var(--switch-height) * 2) - var(--switch-padding));
+            --slider-height: calc(var(--switch-height) - var(--switch-padding));
+            --slider-on: calc(var(--switch-height) - var(--switch-padding));
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: var(--switch-width);
+            height: var(--switch-height);
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            content: "";
+            position: absolute;
+            height: var(--slider-height);
+            width: var(--slider-height);
+            left: calc(var(--switch-padding) / 2);
+            bottom: calc(var(--switch-padding) / 2);
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(var(--slider-on));
+        }
+
+        .slider.round {
+            border-radius: var(--slider-height);
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .pause{
+            opacity: 0.5;
+        }
+
+        /* Switch css end */
+    </style>
+</head>
+
+<body style="width: 200px;">
+    <!-- "Intro" -->
+    <div>
+        <a href="https://bit.ly/let_us_connect" target="blank"
+            style="text-decoration:none;display: flex; align-items: center;justify-content: center;color: black;">
+            <img src="./RR_logo.png" alt="Logo" style="width: 50px;height: 70px;">
+            <span>Adblocker!</span>
+        </a>
+    </div>
+    <br>
+    <!-- All Shields: ON/OFF -->
+    <div style="display: flex; align-items: center;justify-content: center;">
+        <label class="switch">
+            <input type="checkbox" id="shield" checked>
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <p style="display: flex; align-items: center;justify-content: center;" id="shieldStatus"></p>
+
+    <!-- Individual Shields : ON/OFF -->   
+    <div id="individualShields">
+        <!-- 1st: Connection Upgrade to HTTPS -->
+        <div style="display: flex;align-items: center;justify-content: center;">
+            <span>Connection Upgrade to HTTPS&nbsp;</span>
+            <label class="switch">
+                <input type="checkbox" id="httpUpgrade" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <br>
+        <!-- 2nd: Block ads and Trackers -->
+        <div style="display: flex;align-items: center;justify-content: center;">
+            <span>Block Trackers and Adverts &nbsp;</span>
+            <label class="switch">
+                <input type="checkbox" id="trackerBlock" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <br>
+        <!-- 3rd: Malware protection -->
+        <div style="display: flex;align-items: center;justify-content: center;">
+            <span>Malware Protection[BETA] &nbsp;</span>
+            <label class="switch">
+                <input type="checkbox" id="webBlock" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <div>
+        <p style="text-align: center;">
+            You are protected against trackers and ads!
+            <br>
+            <a href="https://bit.ly/let_us_connect" target="blank">Learn More</a>
+        </p>
+    </div>
+</body>
+
+</html>
