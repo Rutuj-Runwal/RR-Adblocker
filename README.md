@@ -5,7 +5,7 @@ The extension has a clean UI to help you toggle features easily. A simple UI als
 
 ### How to Use?
 - Download/clone this repo and extract it to a folder
-- Go to https://chrome://extensions
+- Go to chrome://extensions
 - Enable Developer Mode(If not enabled already)
 - Click on "Load Unpacked" and choose the folder where you extracted this repo
 - Done, Enjoy your experience!
