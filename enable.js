@@ -1,10 +1,14 @@
-
 window.addEventListener("load", function () {
+    chrome.action.setBadgeText({ text: "10+" });
     var myShield = document.getElementById("shield");
     var indvShield = document.getElementById("individualShields");
+    var webBlock = document.getElementById("webBlock");
     
     var data = JSON.parse(localStorage.getItem("uniqueKey_RR"));
-    document.getElementById("shield").checked = data;
+    myShield.checked = data;
+
+    var webBlockStat = JSON.parse(localStorage.getItem("webBlockKey_RR"));
+    webBlock.checked = webBlockStat;
 
     if (myShield.checked) {
         document.getElementById("shieldStatus").innerHTML = "<h4>Shields Up⚡</h4>";
@@ -18,7 +22,7 @@ window.addEventListener("load", function () {
         
         localStorage.setItem("uniqueKey_RR", myShield.checked);
         var data = JSON.parse(localStorage.getItem("uniqueKey_RR"));
-        document.getElementById("shield").checked = data;
+        myShield.checked = data;
 
         if (this.checked) {
             document.getElementById("shieldStatus").innerHTML = "<h4>Shields Up⚡</h4>";  
@@ -28,5 +32,13 @@ window.addEventListener("load", function () {
             indvShield.classList.add('pause');
         }
     });
+
+    webBlock.addEventListener('change', function () {
+
+        localStorage.setItem("webBlockKey_RR", webBlock.checked);
+        var webBlockStat = JSON.parse(localStorage.getItem("webBlockKey_RR"));
+        webBlock.checked = webBlockStat;
+    });
+
     console.log("Adblocking modules loaded✅");
 });
