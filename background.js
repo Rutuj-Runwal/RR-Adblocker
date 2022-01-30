@@ -30,4 +30,3 @@ const defaultFilters = [
 //     console.log("Shield down...");
 //     document.location.reload();
 // }
-

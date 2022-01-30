@@ -3530,7 +3530,7 @@ const defaultFilters = [
     "||globalapi.ad.xiaomi.com",
     "||data.mistat.xiaomi.com",
     "||data.mistat.intl.xiaomi.com",
-    "||data.mistat.india.xiaomi.com", 
+    "||data.mistat.india.xiaomi.com",
     "||data.mistat.rus.xiaomi.com",
     "||api.ad.xiaomi.com",
     "||smetrics.samsung.com",
@@ -10303,7 +10303,10 @@ defaultFilters.forEach((item) => {
                 "stylesheet",
                 "script",
                 "xmlhttprequest",
-                "ping"
+                "ping",
+                "csp_report",
+                "media",
+                "image"
             ]
         }
     })
