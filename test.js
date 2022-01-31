@@ -10313,7 +10313,10 @@ defaultFilters.forEach((item) => {
                 "csp_report",
                 "media",
                 "websocket",
-                "image"
+                "image",
+                "webtransport",
+                "webbundle",
+                "other"
             ]
         }
     })
