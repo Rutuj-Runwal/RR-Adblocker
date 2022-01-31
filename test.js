@@ -10283,7 +10283,13 @@ const defaultFilters = [
     "||widget.trustpilot.com^",
     "||widgets.trustedshops.com^",
     "||jsrdn.com/s/cs.js",
-    "||d1z2jf7jlzjs58.cloudfront.net^"
+    "||d1z2jf7jlzjs58.cloudfront.net^",
+    "||https://r5---sn-ci5gup-2o9e.googlevideo.com^",
+    "||suggestqueries-clients6.youtube.com",
+    "||youtube.com/ptracking",
+    "//*youtube.com/*pagead-id.js",
+    "youtube.com##.ytp-ad-progress-list",
+    "//*youtube.com/*adunit"
 ]
 
 var id = 1
@@ -10306,6 +10312,7 @@ defaultFilters.forEach((item) => {
                 "ping",
                 "csp_report",
                 "media",
+                "websocket",
                 "image"
             ]
         }
