@@ -48,8 +48,6 @@ malwareBlocklist = [
     'amtso.eicar.org/cloudcar.exe/',
     'www.ikarussecurity.com/wp-content/downloads/eicar_com.zip/',
 ]
-console.log(url);
-
 // Receive Malware protection status from enable.js
 chrome.runtime.onMessage.addListener(
     function (request) {
