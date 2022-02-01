@@ -32,14 +32,11 @@ const generateHTML = () => {
 };
 
 var url = window.location.hostname+window.location.pathname;
-
-// var myURL = url.split(".");
-// var flag = 1;
-// if(myURL[0]!='www'){
-//   flag=0;
-// }
 // TODO: Dynamic list generation using https://gitlab.com/curben/urlhaus-filter#urlhaus-malicious-url-blocklist
 //https://curben.gitlab.io/malware-filter/urlhaus-filter-online.txt
+
+
+
 malwareBlocklist = [
     'secure.eicar.org/eicar.com.txt',
     'maliciouswebsitetest.com/',
@@ -48,10 +45,9 @@ malwareBlocklist = [
     'amtso.eicar.org/cloudcar.exe/',
     'www.ikarussecurity.com/wp-content/downloads/eicar_com.zip/',
 ]
-// Receive Malware protection status from enable.js
+// Receive Malware protection status
 chrome.runtime.onMessage.addListener(
     function (request) {
-        console.log(request.webBlock);
         if (request.webBlock === true)
             malwareBlocklist.find(element => {
                 // if(element.includes(myURL[1]) && flag){  
