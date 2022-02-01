@@ -41,6 +41,7 @@ Disable the extension and visit the same site! (Disclamer: The EICAR site is "sa
 
 
 ## References:
+- Chrome Docs: [Extension Ref](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/)
 - Ad blocking: [EasyList](https://easylist.to/)
 - Trackers Blocking: [Fnb](https://secure.fanboy.co.nz/)
 - Malware Blocking: [UrlHaus](https://gitlab.com/curben/urlhaus-filter)
