@@ -1,8 +1,6 @@
 # RR-Adblocker
-The Adblocker blocks ads and trackers to make your web surfing faster and safer.
-
-The extension has a clean UI to help you toggle features easily. A simple UI also ensures that the memory impact is low.
-
+An Adblocker that blocks ads and trackers to make your web surfing faster and safer.
+This extension blocks ads and tracker networks on all popular websites including(but not limited to) Youtube, Reddit , Quora
 ### How to Use?
 - Download/clone this repo and extract it to a folder
 - Go to chrome://extensions
@@ -13,10 +11,10 @@ The extension has a clean UI to help you toggle features easily. A simple UI als
 ![User iterface](https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/Demos/1.png)
 
 ## Features Include:
-- HTTP to HTTPS Upgrade(If available)
 - Trackers Blocking
 - Adverts Blocking
-- Malware Protection
+- Malware Protection[BETA]
+- Phishing Protectiong
 
 
 ### Advert and Trackers blocking
