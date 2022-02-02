@@ -37,14 +37,15 @@ var url = window.location.hostname+window.location.pathname;
 
 
 
-malwareBlocklist = [
+let malwareBlocklist = [
     'secure.eicar.org/eicar.com.txt',
     'maliciouswebsitetest.com/',
     'www.amtso.org/check-desktop-phishing-page/',
     'amtso.eicar.org/PotentiallyUnwanted.exe/',
     'amtso.eicar.org/cloudcar.exe/',
     'www.ikarussecurity.com/wp-content/downloads/eicar_com.zip/',
-]
+];
+
 // Receive Malware protection status
 chrome.runtime.onMessage.addListener(
     function (request) {
