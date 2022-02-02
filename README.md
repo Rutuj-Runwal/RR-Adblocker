@@ -6,6 +6,7 @@ This extension blocks ads and tracker networks on all popular websites including
 - Go to chrome://extensions
 - Enable Developer Mode(If not enabled already)
 - Click on "Load Unpacked" and choose the folder where you extracted this repo
+- Pin the extension and enable the shields
 - Done, Enjoy your experience!
 
 ![User iterface](https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/Demos/1.png)
