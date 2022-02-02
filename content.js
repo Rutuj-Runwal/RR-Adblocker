@@ -57,8 +57,5 @@ chrome.runtime.onMessage.addListener(
                     document.body.innerHTML = generateHTML();
                 }
             });
-        else{
-            console.log("Malware protection off!");
-        }
     }
 );

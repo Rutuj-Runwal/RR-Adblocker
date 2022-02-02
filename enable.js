@@ -56,6 +56,7 @@ window.addEventListener("load", function () {
         if (this.checked) {
             document.getElementById("shieldStatus").innerHTML = "<h4>Shields Up⚡</h4>";
             indvShield.classList.remove('pause');
+            chrome.tabs.reload(currtabID);
             chrome.declarativeNetRequest.updateEnabledRulesets(
                 {
                     enableRulesetIds: ["blockLIST"]
@@ -75,6 +76,7 @@ window.addEventListener("load", function () {
         } else {
             document.getElementById("shieldStatus").innerHTML = "<h4>Shields Down😓</h4>";
             indvShield.classList.add('pause');
+            chrome.tabs.reload(currtabID);
             chrome.declarativeNetRequest.updateEnabledRulesets(
                 {
                     disableRulesetIds: ["blockLIST"]
