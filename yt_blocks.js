@@ -1,6 +1,7 @@
 // "tvcap" and "bottomads" are id's of ads in google's search
 var Google_ResultAd = document.getElementById("tvcap");
 var Google_ResultAdBottom = document.getElementById("bottomads");
+var DDG_ResultAd = document.getElementById("ads");
 
 if (Google_ResultAd != undefined && Google_ResultAd.length != 0) {
     Google_ResultAd.style.display = "none";
@@ -21,6 +22,10 @@ setInterval(function () {
 
 window.addEventListener("load", function () {
     setInterval(() => {
+        if (DDG_ResultAd != undefined && DDG_ResultAd.length != 0) {
+            DDG_ResultAd.style.display = "none";
+        }
+        
         var YT_companion = document.getElementById("player-ads");
         var YT_homepgAd = document.getElementsByClassName("style-scope ytd-display-ad-renderer");
         var YT_searchAd = document.getElementsByClassName("style-scope ytd-promoted-sparkles-text-search-renderer");
