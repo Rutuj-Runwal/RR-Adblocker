@@ -1,5 +1,5 @@
 # RR-Adblocker
-RR Adblocker is a chrome extension that blocks ads and trackers to make your web surfing faster and safer.
+RR Adblocker is a an open-source browser extension that blocks ads and trackers to make your web surfing faster and safer.
 This extension blocks ads and tracker networks on all popular websites including(but not limited to) Youtube, Reddit, Google...
 
 ### How to Use?
