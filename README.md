@@ -2,11 +2,11 @@
 RR Adblocker is a an open-source browser extension that blocks ads and trackers to make your web surfing faster and safer.
 This extension blocks ads and tracker networks on all popular websites including(but not limited to) Youtube, Reddit, Google...
 
-### How to Use?
-- Download/clone this repo and extract it to a folder
-- Go to chrome://extensions
+## Installation Instructions
+- Download/clone this repo as a [ZIP file from GitHub](https://github.com/Rutuj-Runwal/RR-Adblocker/archive/refs/heads/main.zip) and extract it to a folder
+- In Chrome go to the extensions page (`chrome://extensions`).
 - Enable Developer Mode(If not enabled already)
-- Click on "Load Unpacked" and choose the folder where you extracted this repo
+- Click on "Load Unpacked" and choose the folder where you extracted this repo 
 - Pin the extension and enable the shields
 - Done, Enjoy your experience!
 
