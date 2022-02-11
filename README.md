@@ -16,7 +16,7 @@ This extension blocks ads and tracker networks on all popular websites including
 - Trackers Blocking
 - Adverts Blocking
 - Malware Protection[BETA]
-- Phishing Protectiong
+- Phishing Protectiong[BETA]
 
 
 ### Advert and Trackers blocking
