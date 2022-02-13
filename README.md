@@ -13,10 +13,8 @@
     An efficient blocker add-on for various browsers! Fast, Robust and Open-Source.
   </p>
 
-***
-
 <p align="center">
-<a href="https://addons.mozilla.org/firefox/addon/rr-adblocker/"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/Assests/firefox.png" alt="Get RR Adblocker for Firefox Today!"></a> 
+<a href="https://addons.mozilla.org/firefox/addon/rr-adblocker/"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox Today!"></a> 
 </p>
 
 ***
@@ -32,7 +30,7 @@ Out of the box, the extension blocks ads, trackers and malware sites and is powe
 - Pin the extension and enable the shields
 - Done, Enjoy your experience!
 
-![User iterface](https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/Assests/1.png)
+![User iterface](https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/assets/1.png)
 
 ## Features Include:
 - Trackers Blocking
@@ -47,17 +45,17 @@ To test the advert and trackers blocking feature head over to any website of you
 Here we have used https://www.speedtest.net/ to demonstrate
 
 #### When the extension is enabled
-![Ads Blocked](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/Assests/3.png)
+![Ads Blocked](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/3.png)
 
 #### When the extension is disabled
-![Ads visible](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/Assests/7.png)
+![Ads visible](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/7.png)
 
 #### Malware Blocking
 
 For the purpose of this demo we have used EICAR Official site: https://secure.eicar.org/eicar.com.txt
 When the extension is enabled the site is blocked. 
 
-![Malware Blocking](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/Assests/5.png)
+![Malware Blocking](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/5.png)
 
 Disable the extension and visit the same site! (Disclamer: The EICAR site is "safe" but we recommend you to keep Malware protection turned on!)
 
