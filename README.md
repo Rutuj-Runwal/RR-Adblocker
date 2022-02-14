@@ -13,7 +13,7 @@
   </p>
 
 <p align="center">
-<a href="https://addons.mozilla.org/firefox/addon/rr-adblocker/"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox Today!"></a> 
+<a href="https://mzl.la/3BhY6C9"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox Today!"></a> 
 </p>
 
 ***
