@@ -10,6 +10,10 @@ if (Google_ResultAdBottom != undefined && Google_ResultAdBottom.length != 0) {
     Google_ResultAdBottom.style.display = "none";
 }
 
+if (DDG_ResultAd != undefined && DDG_ResultAd.length != 0) {
+    DDG_ResultAd.style.display = "none";
+}
+
 setInterval(function () {
     var YT_skipButton = document.getElementsByClassName("ytp-ad-skip-button");
     
@@ -20,11 +24,7 @@ setInterval(function () {
 }, 7);
 
 window.addEventListener("load", function () {
-    setInterval(() => {
-        if (DDG_ResultAd != undefined && DDG_ResultAd.length != 0) {
-            DDG_ResultAd.style.display = "none";
-        }
-        
+    setInterval(() => { 
         var YT_companion = document.getElementById("player-ads");
         var YT_homepgAd = document.getElementsByClassName("style-scope ytd-display-ad-renderer");
         var YT_searchAd = document.getElementsByClassName("style-scope ytd-promoted-sparkles-text-search-renderer");
@@ -40,13 +40,13 @@ window.addEventListener("load", function () {
                 YT_searchAd[i].style.display = "none";
             }
         }
+        
         var adUnbreak1 = document.getElementsByClassName("amazon_ad");
         var adUnbreak2 = document.getElementsByClassName("mrec-scrollable-cont");
         var adUnbreak3 = document.getElementsByClassName("fc_clmb_ad");
-        var adUnbreak4 = document.getElementsByClassName("clmb_eoa");    
-        
+        var adUnbreak4 = document.getElementsByClassName("clmb_eoa");
+
         if ((adUnbreak1 != undefined && adUnbreak1.length != 0) || (adUnbreak2 != undefined && adUnbreak2.length != 0) || (adUnbreak3 != undefined && adUnbreak3.length != 0) || (adUnbreak4 != undefined && adUnbreak4.length != 0)) {
-            console.log("Redundant Ads container removed!");
             for (let i = 0; i < adUnbreak1.length; i++) {
                 adUnbreak1[i].style.display = "none";
             }
@@ -61,13 +61,10 @@ window.addEventListener("load", function () {
             }
         }
 
-        var adUnbreakUniversal = document.querySelectorAll('[class*="ads"]');
-        if(adUnbreakUniversal!= undefined && adUnbreakUniversal.length!=0){
-            console.log("Redundant Ad div's removed & page cleaned up!");
-            for (let i = 0; i < adUnbreakUniversal.length; i++) {
-                adUnbreakUniversal[i].style.display = "none";
-            }
-        }
-
     }, 700);
+    // When some advertising domains are blocked, webpages can contain empty div's where the advertisment
+    // was supposed to be displayed, the below lines hide those empty containers and make page formatting better.
+    document.querySelectorAll('[class*="advertisement-"]').forEach(el => { console.log(el); if (!el.getAttribute("class").includes("non-ad")) { el.remove() } });
+    document.querySelectorAll('[class*="gpt-ad"]').forEach(el => { console.log(el); el.remove()});
+
  });
