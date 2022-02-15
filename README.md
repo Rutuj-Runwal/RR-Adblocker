@@ -2,7 +2,6 @@
 [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/Rutuj-Runwal/RR-adblocker/blob/master/LICENSE)
 <!-- [![Mozilla Add-ons](https://img.shields.io/amo/rating/rr-adblocker?label=Firefox)](https://addons.mozilla.org/firefox/addon/rr-adblocker/) -->
 
-*** 
   <h1 align="center">
     <sub>
       <img  src="https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/RR_logo.png?raw=true" height="45" width="45" style="border-raduis:20%">
@@ -14,7 +13,7 @@
   </p>
 
 <p align="center">
-<a href="https://addons.mozilla.org/firefox/addon/rr-adblocker/"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox Today!"></a> 
+<a href="https://mzl.la/3BhY6C9"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox Today!"></a> 
 </p>
 
 ***
