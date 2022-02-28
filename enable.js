@@ -1,24 +1,25 @@
 window.addEventListener("load", function () {
-    var MAX_GETMATCHEDRULES_CALLS = 20;
-    var myShield = document.getElementById("shield");
+    const MAX_GETMATCHEDRULES_CALLS = 20;
+    var myShield = document.getElementById("site_link");
     var indvShield = document.getElementById("individualShields");
-    var webBlock = document.getElementById("webBlock");
+    var showDomainDiv = document.getElementById("showDomain");
+
+    function disableDNR(){
+        chrome.declarativeNetRequest.updateEnabledRulesets({disableRulesetIds: ["blockLIST"] });
+    }
+
+    var currtab , currtabID;
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        currtab = tabs[0];
+        currtabID = tabs[0].id;
+        showDomainDiv.innerText = "Domain: " + currtab.url.split('/')[2];
+    });
 
     var data = JSON.parse(localStorage.getItem("uniqueKey_RR"));
     myShield.checked = data;
 
-    var webBlockStat = JSON.parse(localStorage.getItem("webBlockKey_RR"));
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, { webBlock: webBlockStat });
-    });
-    webBlock.checked = webBlockStat;
-
-    var currtabID;
-    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-        currtabID = tabs[0].id;
-    });
-
     if (myShield.checked) {
+        showDomainDiv.style.backgroundColor = "#0F8C44";
         document.getElementById("shieldStatus").innerHTML = "<h4>Shields Up⚡</h4>";
         indvShield.classList.remove('pause');
         chrome.declarativeNetRequest.updateEnabledRulesets(
@@ -37,14 +38,12 @@ window.addEventListener("load", function () {
                 }
             }
         );
+
     } else {
+        showDomainDiv.style.backgroundColor = "#2196F3";
         document.getElementById("shieldStatus").innerHTML = "<h4>Shields Down😓</h4>";
         indvShield.classList.add('pause');
-        chrome.declarativeNetRequest.updateEnabledRulesets(
-            {
-                disableRulesetIds: ["blockLIST"]
-            }
-        );
+        disableDNR();
     }
 
     myShield.addEventListener('change', function () {
@@ -56,7 +55,7 @@ window.addEventListener("load", function () {
         if (this.checked) {
             document.getElementById("shieldStatus").innerHTML = "<h4>Shields Up⚡</h4>";
             indvShield.classList.remove('pause');
-            chrome.tabs.reload(currtabID);
+            showDomainDiv.style.backgroundColor = "#0F8C44"; 
             chrome.declarativeNetRequest.updateEnabledRulesets(
                 {
                     enableRulesetIds: ["blockLIST"]
@@ -73,25 +72,15 @@ window.addEventListener("load", function () {
                     }
                 }
             );
+            chrome.tabs.reload(currtab.id);
+
         } else {
             document.getElementById("shieldStatus").innerHTML = "<h4>Shields Down😓</h4>";
             indvShield.classList.add('pause');
-            chrome.tabs.reload(currtabID);
-            chrome.declarativeNetRequest.updateEnabledRulesets(
-                {
-                    disableRulesetIds: ["blockLIST"]
-                }
-            );
+            showDomainDiv.style.backgroundColor = "#2196F3";
+            disableDNR();
+            chrome.tabs.reload(currtab.id);  
         }
-    });
-
-    webBlock.addEventListener('change', function () {
-        chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            chrome.tabs.sendMessage(tabs[0].id, { webBlock: webBlock.checked });
-        });
-        localStorage.setItem("webBlockKey_RR", webBlock.checked);
-        var webBlockStat = JSON.parse(localStorage.getItem("webBlockKey_RR"));
-        webBlock.checked = webBlockStat;
     });
 
     console.log("Adblocking modules loaded✅");

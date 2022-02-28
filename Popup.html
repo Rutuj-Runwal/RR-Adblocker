@@ -16,6 +16,9 @@
             --slider-height: calc(var(--switch-height) - var(--switch-padding));
             --slider-on: calc(var(--switch-height) - var(--switch-padding));
         }
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
 
         .switch {
             position: relative;
@@ -79,6 +82,16 @@
         }
 
         /* Switch css end */
+        #showDomain{
+            margin-top: 2px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            width: 200px;
+            height: max-content;
+            padding: 3px;
+            text-align: center;
+            font-size: 110% !important;
+        }
     </style>
 </head>
 
@@ -95,12 +108,14 @@
     <!-- All Shields: ON/OFF -->
     <div style="display: flex; align-items: center;justify-content: center;">
         <label class="switch">
-            <input type="checkbox" id="shield" checked>
+            <input type="checkbox" id="site_link" checked>
             <span class="slider round"></span>
         </label>
     </div>
 
-    <p style="display: flex; align-items: center;justify-content: center;" id="shieldStatus"></p>
+    <p style="display: flex; align-items: center;justify-content: center;font-size: 110% !important;" id="shieldStatus"></p>
+
+    <div id="showDomain"><span style="color: #ccc;">Domain:</span></div>
 
     <!-- Individual Shields : ON/OFF -->   
     <div id="individualShields">
@@ -139,6 +154,7 @@
             <a href="https://bit.ly/let_us_connect" target="blank">Learn More</a>
         </p>
     </div>
+    <script src="popup.js"></script>
 </body>
 
 </html>
