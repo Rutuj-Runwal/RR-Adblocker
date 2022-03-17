@@ -1,6 +1,6 @@
 [![Commit rate](https://img.shields.io/github/commit-activity/m/Rutuj-Runwal/RR-Adblocker?label=Commits)](https://github.com/Rutuj-Runwal/RR-Adblocker/commits/master)
 [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/Rutuj-Runwal/RR-adblocker/blob/master/LICENSE)
-<!-- [![Mozilla Add-ons](https://img.shields.io/amo/rating/rr-adblocker?label=Firefox)](https://addons.mozilla.org/firefox/addon/rr-adblocker/) -->
+[![Mozilla Add-ons](https://img.shields.io/amo/rating/rr-adblocker?label=Firefox)](https://addons.mozilla.org/firefox/addon/rr-adblocker/)
 
   <h1 align="center">
     <sub>
@@ -13,7 +13,8 @@
   </p>
 
 <p align="center">
-<a href="https://mzl.la/3BhY6C9"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox Today!"></a> 
+<a href="https://mzl.la/3BhY6C9"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox"></a> 
+<a href="https://bit.ly/rr-adblocker_microsoft-edge"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/edge.png" alt="Get RR Adblocker for Microsoft Edge"></a>
 </p>
 
 ***
