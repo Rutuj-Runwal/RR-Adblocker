@@ -1,54 +1,118 @@
-var browser = (window.browser) ? window.browser : window.chrome;
-var site_link = document.getElementById('site_link');
-var domain = '???';
 var disabled = {};
+var myShield = document.getElementById("site_link");
+var indvShield = document.getElementById("individualShields");
+var showDomainDiv = document.getElementById("showDomain");
+var statsCount = document.getElementById("showStatistics");
+var optionsSetting = document.getElementById("Openoptions");
 
-function toggleSiteLink() {
-    var action = disabled[domain] ? false : true;
-    site_link.checked = action;
+function disableDNR() {
+  chrome.declarativeNetRequest.updateEnabledRulesets({
+    disableRulesetIds: ["blockLIST"],
+  });
+}
+if(optionsSetting!=undefined){
+  document.querySelector('#Openoptions').addEventListener('click', function () {
+    if (chrome.runtime.openOptionsPage) {
+      chrome.runtime.openOptionsPage();
+    } else {
+      window.open(chrome.runtime.getURL('options.html'));
+    }
+  });
 }
 
-function runInTab(fn) {
-    var options = { 'active': true, 'windowId': browser.windows.WINDOW_ID_CURRENT };
-    browser.tabs.query(options, function (tabs) { fn(tabs[0]); });
-}
-
-runInTab(function (tab) {
-    browser.storage.sync.get('*', function (result) {
-        disabled['*'] = result['*'] == true;
-        if (!disabled['*']) {
-            domain = tab.url.split('/')[2];
-            browser.storage.sync.get(domain, function (result) {
-                disabled[domain] = result[domain] == true;
-                toggleSiteLink();
-            })
-        }
-    })
+var currtab, currtabID;
+chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+  currtab = tabs[0];
+  currtabID = tabs[0].id;
+  showDomainDiv.innerText = "Domain: " + currtab.url.split("/")[2];
+});
+chrome.storage.sync.get('advStat', function (items) {
+  if (items.advStat) {
+    chrome.declarativeNetRequest.updateEnabledRulesets({
+      enableRulesetIds: ["advLIST"],
+    });
+  }
+  else{
+    chrome.declarativeNetRequest.updateEnabledRulesets({
+      disableRulesetIds: ["advLIST"],
+    });
+  }
 });
 
-site_link.addEventListener("change", function () {
-    toggle(domain);
-});
-
-function reload() {
-    runInTab(function (tab) {
-        browser.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-            browser.tabs.reload(tabs[0].id);
+chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+  var domain = tabs[0].url.split("/")[2];
+  chrome.storage.sync.get('*', function (disabled) {
+    chrome.storage.sync.get(domain, function (disabled) {
+      console.log(disabled[domain]);
+      if (disabled[domain] == undefined) {
+        myShield.checked = true;
+        indvShield.classList.remove("pause");
+        showDomainDiv.style.backgroundColor = "#0F8C44";
+        chrome.declarativeNetRequest.updateEnabledRulesets({
+          enableRulesetIds: ["blockLIST"],
         });
-    });
-}
-
-function toggle(target) {
-    disabled[target] = disabled[target] != true;
-    browser.storage.sync.set(disabled, function () {
-        if (browser.runtime.lastError) {
-            browser.storage.sync.clear(function () {
-                browser.storage.sync.set(disabled, function () {
-                    reload();
-                });
-            });
-        } else {
-            reload();
+      }
+      else {
+        if (disabled[domain]) { // Disable Blocking
+          myShield.checked = false;
+          showDomainDiv.style.backgroundColor = "#2196F3";
+          indvShield.classList.add("pause");
+          statsCount.innerText = "0 ";
+          disableDNR();
         }
+        else { // Enable Blocking 
+          myShield.checked = true;
+          showDomainDiv.style.backgroundColor = "#0F8C44";
+          indvShield.classList.remove("pause");
+          chrome.declarativeNetRequest.updateEnabledRulesets({
+            enableRulesetIds: ["blockLIST"],
+          });
+        }
+      }
     });
-}
+  });
+});
+
+chrome.storage.local.get(['tabIDStr'], function (result) {
+  var impUrlArray = result.tabIDStr;
+  if (impUrlArray != undefined) {
+    statsCount.innerText = impUrlArray.length;
+  }
+});
+
+myShield.addEventListener("change", function () {
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    var domain = tabs[0].url.split("/")[2];
+    myShield.checked ? disabled[domain] = false : disabled[domain] = true;
+    chrome.storage.sync.set(disabled, disabled[domain]);
+    chrome.storage.sync.get(domain, function (disabled) {
+      if (disabled[domain] == undefined) {
+        myShield.checked = true;
+        indvShield.classList.remove("pause");
+        showDomainDiv.style.backgroundColor = "#0F8C44";
+        chrome.declarativeNetRequest.updateEnabledRulesets({
+          enableRulesetIds: ["blockLIST"],
+        });
+      }
+      else{
+        if (disabled[domain]==true) { // Disable Blocking
+          myShield.checked = false;
+          indvShield.classList.add("pause");
+          showDomainDiv.style.backgroundColor = "#2196F3";
+          statsCount.innerText = "0 ";
+          disableDNR();
+          chrome.tabs.reload(currtab.id);
+        }
+        else { // Enable Blocking
+          myShield.checked = true;
+          indvShield.classList.remove("pause");
+          showDomainDiv.style.backgroundColor = "#0F8C44";
+          chrome.declarativeNetRequest.updateEnabledRulesets({
+            enableRulesetIds: ["blockLIST"],
+          });
+          chrome.tabs.reload(currtab.id);
+        }
+      }
+    });
+  });
+});

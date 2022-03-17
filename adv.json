@@ -1,0 +1,200 @@
+[
+    {
+    "id": 1,
+    "priority": 1,
+    "action": {
+        "type": "block"
+    },
+    "condition": {
+        "regexFilter": "[a-zA-Z0-9\/.-_]+ads[.net|.com]+[a-zA-Z0-9\/-_.]*$",
+        "resourceTypes": [
+            "main_frame",
+            "sub_frame",
+            "stylesheet",
+            "script",
+            "xmlhttprequest",
+            "ping",
+            "csp_report",
+            "media",
+            "websocket",
+            "image"
+        ]
+        }
+    },
+    {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "[a-zA-Z0-9\/.-_]+.xyz+[a-zA-Z0-9\/-_.]*$",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "(^|.)xn--.*$",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^adtrack(er|ing)?[0-9]*[_.-]",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^advert(s|is(ing|ements?))?[0-9]*[_.-]",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^track(ers?|ing)?[0-9]*[-.]",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^banners?[_.-]",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^(.+[_.-])?telemetry[_.-]",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    }
+]

@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./enable.js"></script>
+    <title>RR Adblocker</title>
     <style>
         /* Switch css start */
         * {
@@ -86,20 +85,41 @@
             margin-top: 2px;
             margin-bottom: 20px;
             border-radius: 10px;
-            width: 200px;
+            width: 230px;
             height: max-content;
             padding: 3px;
             text-align: center;
             font-size: 110% !important;
+            margin-top: 10px !important;
+            margin-bottom: 10px !important;
+        }
+        #showStatDiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        #showStatDiv{
+            cursor: pointer;
+        }
+        #displaySite{
+            text-decoration: none;
+        }
+        #Openoptions{
+            float: right;
+            width: 27px !important;
+            height: 27px !important;
+            cursor: pointer;
         }
     </style>
 </head>
 
-<body style="width: 200px;">
+<body style="width: 230px;">
     <!-- "Intro" -->
     <div>
-        <a href="https://bit.ly/let_us_connect" target="blank"
-            style="text-decoration:none;display: flex; align-items: center;justify-content: center;color: black;">
+        <img src="./setting.png" id="Openoptions">
+        <a href="#"
+            style="text-decoration:none;display: flex; align-items: center;justify-content: center;color: black;cursor: default;">
             <img src="./RR_logo.png" alt="Logo" style="width: 50px;height: 70px;">
             <span>Adblocker!</span>
         </a>
@@ -112,16 +132,23 @@
             <span class="slider round"></span>
         </label>
     </div>
+    <br>
+    <div id="showStatDiv">
+        <div >
+            <a id="displaySite" href="./showBlocked.html">
+                <span id="showStatistics" style="font-size: 205% !important;">3</span><span style="font-size: 115% !important;">
+                    items blocked</span>
+            </a>
+        </div>
+    </div>
 
-    <p style="display: flex; align-items: center;justify-content: center;font-size: 110% !important;" id="shieldStatus"></p>
-
-    <div id="showDomain"><span style="color: #ccc;">Domain:</span></div>
+    <div id="showDomain" style="font-size: 125% !important;"><span style="color: #ccc;">Domain:</span></div>
 
     <!-- Individual Shields : ON/OFF -->   
     <div id="individualShields">
         <!-- 1st: Connection Upgrade to HTTPS -->
         <div style="display: flex;align-items: center;justify-content: center;">
-            <span>Connection Upgrade to HTTPS&nbsp;</span>
+            <span style="font-size: 115% !important;">Connection Upgrade to HTTPS&nbsp;</span>
             <label class="switch">
                 <input type="checkbox" id="httpUpgrade" checked>
                 <span class="slider round"></span>
@@ -130,7 +157,7 @@
         <br>
         <!-- 2nd: Block ads and Trackers -->
         <div style="display: flex;align-items: center;justify-content: center;">
-            <span>Block Trackers and Adverts &nbsp;</span>
+            <span style="font-size: 115% !important;">Block Trackers and Adverts &nbsp;</span>
             <label class="switch">
                 <input type="checkbox" id="trackerBlock" checked>
                 <span class="slider round"></span>
@@ -139,13 +166,15 @@
         <br>
         <!-- 3rd: Malware protection -->
         <div style="display: flex;align-items: center;justify-content: center;">
-            <span>Malware Protection[BETA] &nbsp;</span>
+            <span style="font-size: 115% !important;">Malware Protection[BETA] &nbsp;</span>
             <label class="switch">
                 <input type="checkbox" id="webBlock" checked>
                 <span class="slider round"></span>
             </label>
         </div>
     </div>
+    <br>
+    <!-- <table id="blockedDomains" style="display: none;"></table> -->
 
     <div>
         <p style="text-align: center;">
@@ -154,6 +183,9 @@
             <a href="https://bit.ly/let_us_connect" target="blank">Learn More</a>
         </p>
     </div>
+    <br>
+    <div id="showItHere"></div>
+    
     <script src="popup.js"></script>
 </body>
 
