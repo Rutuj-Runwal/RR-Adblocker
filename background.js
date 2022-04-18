@@ -4,7 +4,7 @@ function disableDNR() {
     });
 }
 setInterval(() => {
-    chrome.storage.sync.get(['advStat','antiPrnStat'], function (items) {
+    chrome.storage.sync.get(['advStat', 'antiPrnStat', 'suspStat'], function (items) {
         if (items.advStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
                 enableRulesetIds: ["advLIST"],
@@ -15,6 +15,11 @@ setInterval(() => {
                 enableRulesetIds: ["antiprnLIST"],
             });
         }
+        if (items.suspStat){
+            chrome.declarativeNetRequest.updateEnabledRulesets({
+                enableRulesetIds: ["suspLIST"],
+            });
+        }
         else if(!items.advStat){
             chrome.declarativeNetRequest.updateEnabledRulesets({
                 disableRulesetIds: ["advLIST"],
@@ -23,6 +28,11 @@ setInterval(() => {
         else if (!items.antiPrnStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
                 disableRulesetIds: ["antiprnLIST"],
+            });
+        }
+        else if (!items.suspStat) {
+            chrome.declarativeNetRequest.updateEnabledRulesets({
+                disableRulesetIds: ["suspLIST"],
             });
         }
     });

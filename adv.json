@@ -6,7 +6,7 @@
         "type": "block"
     },
     "condition": {
-        "regexFilter": "[a-zA-Z0-9\/.-_]+ads[.net|.com]+[a-zA-Z0-9\/-_.]*$",
+        "regexFilter": "^adim(age|g)s?[0-9]*[_.-]",
         "resourceTypes": [
             "main_frame",
             "sub_frame",
@@ -28,7 +28,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "[a-zA-Z0-9\/.-_]+.xyz+[a-zA-Z0-9\/-_.]*$",
+            "regexFilter": "(^|.)xn--.*$",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -50,7 +50,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "(^|.)xn--.*$",
+            "regexFilter": "^adtrack(er|ing)?[0-9]*[_.-]",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -72,7 +72,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "^adtrack(er|ing)?[0-9]*[_.-]",
+            "regexFilter": "^advert(s|is(ing|ements?))?[0-9]*[_.-]",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -94,7 +94,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "^advert(s|is(ing|ements?))?[0-9]*[_.-]",
+            "regexFilter": "^track(ers?|ing)?[0-9]*[-.]",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -116,7 +116,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "^track(ers?|ing)?[0-9]*[-.]",
+            "regexFilter": "^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -138,7 +138,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "^(.+[_.-])?adse?rv(er?|ice)?s?[0-9]*[_.-]",
+            "regexFilter": "^(.+[_.-])?telemetry[_.-]",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -160,7 +160,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "^banners?[_.-]",
+            "regexFilter": ".*manifest.googlevideo.com$",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -182,7 +182,139 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "^(.+[_.-])?telemetry[_.-]",
+            "regexFilter": "^clients[0-9]+?.youtube.com$",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^r[0-9-.]+sn.*googlevideo.com$",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^.*?google(?:adservices|apis|syndication|usercontent)?.com$",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 12,
+        "priority": 2,
+        "action": {
+            "type": "allow"
+        },
+        "condition": {
+            "regexFilter": "links.duckduckgo.*",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 13,
+        "priority": 2,
+        "action": {
+            "type": "allow"
+        },
+        "condition": {
+            "regexFilter": "app.bitly.com",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 14,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^banners?[_.-]",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "[a-zA-Z0-9\/.-_=&?-~]+ads.js",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",

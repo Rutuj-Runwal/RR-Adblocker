@@ -29,6 +29,7 @@ window.addEventListener("load", function () {
         var YT_companion = document.getElementById("player-ads");
         var YT_homepgAd = document.getElementsByClassName("style-scope ytd-display-ad-renderer");
         var YT_searchAd = document.getElementsByClassName("style-scope ytd-promoted-sparkles-text-search-renderer");
+        var YT_overlayAd = document.getElementsByClassName('video-ads ytp-ad-module')[0];
 
         if (YT_companion != undefined) {
             YT_companion.style.display = "none";
@@ -40,6 +41,11 @@ window.addEventListener("load", function () {
             for (let i = 0; i < YT_searchAd.length; i++) {
                 YT_searchAd[i].style.display = "none";
             }
+        }
+
+        if (YT_overlayAd != undefined && YT_overlayAd.length > 0) {
+            console.log("OVERLAY DETECTED!");
+            YT_overlayAd.style.display = "none";
         }
 
         var adUnbreak2 = document.getElementsByClassName("mrec-scrollable-cont");
@@ -80,6 +86,7 @@ window.addEventListener("load", function () {
 
                         document.querySelectorAll('[class*="adsbygoogle"]').forEach(el => { console.log(el); el.remove() });
                         document.querySelectorAll('[id*="adsbygoogle"]').forEach(el => { console.log(el); el.remove() });
+                        // .forEach(el => { console.log(el); el.remove() });
                     }
                 });
             });

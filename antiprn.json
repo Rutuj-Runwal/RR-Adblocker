@@ -6,7 +6,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "[a-zA-Z0-9\/._+=-]+xxx+[a-zA-Z0-9\/_.+?%-=]*",
+            "regexFilter": "[a-zA-Z0-9\/._+=-]+porn+[a-zA-Z0-9\/_.+?%-=]*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -28,7 +28,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "[a-zA-Z0-9\/._+=-]+porn+[a-zA-Z0-9\/_.+?%-=]*",
+            "regexFilter": "[a-zA-Z0-9\/._+=-]+sex+[a-zA-Z0-9\/_.+?%-=]*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -50,7 +50,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "[a-zA-Z0-9\/._+=-]+sex+[a-zA-Z0-9\/_.+?%-=]*",
+            "regexFilter": ".*(omg.adult|stripchat|superchat.live|goldendesi|x-videos|xvideos|xhamster|xbokeh|xnxx).*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -72,7 +72,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": ".*(omg.adult|stripchat|goldendesi|x-videos|xvideos|xhamster|xbokeh|xnxx).*",
+            "regexFilter": "[a-zA-Z0-9\/._+=-]*mastrubat[a-zA-Z0-9\/_.+?%-=]*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -94,7 +94,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": "[a-zA-Z0-9\/._+=-]*mastrubat[a-zA-Z0-9\/_.+?%-=]*",
+            "regexFilter": ".*(hentai|webcamsex|chudai|gand).*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -116,7 +116,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": ".*(hentai|webcamsex|chudai|gand).*",
+            "regexFilter": ".*(missionary|doggystyle|cowgirl|orgy).*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -138,7 +138,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": ".*(missionary|doggystyle|cowgirl).*",
+            "regexFilter": ".*adultvid.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -160,7 +160,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": ".*adultvid.*",
+            "regexFilter": ".*fetish.*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -182,7 +182,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": ".*fetish.*",
+            "regexFilter": ".*(moan|boobs|slut|milf|threesome|tits|creampie|dildo|squirt|dick).*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -204,7 +204,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": ".*(moan|boobs|slut|milf|threesome|tits|creampie|dildo|squirt|dick).*",
+            "regexFilter": ".*(-|)fuck(i|s|-).*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -226,29 +226,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": ".*(-|)fuck(i|s|-).*",
-            "resourceTypes": [
-                "main_frame",
-                "sub_frame",
-                "stylesheet",
-                "script",
-                "xmlhttprequest",
-                "ping",
-                "csp_report",
-                "media",
-                "websocket",
-                "image"
-            ]
-        }
-    },
-    {
-        "id": 12,
-        "priority": 1,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "regexFilter": ".*(cock|cumshot|nude|nudity|pussy|lesbian|stepmom|lick|sucking).*",
+            "regexFilter": ".*(cock|cumshot|nude|nudity|pussy|lesbian|stepmom|sucking).*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",

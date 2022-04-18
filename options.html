@@ -63,6 +63,10 @@
         #modal-content{
             pointer-events: all;
         }
+        input[type='checkbox'] {
+            width:17px;
+            height:17px;
+        }
     </style>
 </head>
 
@@ -85,7 +89,10 @@
         <label for="useAdv">Advanced Filters[Experimental]</label>
         <br>
         <input type="checkbox" id="useAntiPrn">
-        <label for="useAdv">Adult Content Blocking</label>
+        <label for="useAntiPrn">Adult Content Blocking</label>
+        <br>
+        <input type="checkbox" id="useSuspBlock">
+        <label for="useSuspBlock">Suspicious Domain Blocker</label>
     </div>
     <div class="set">
         <div id="status" style="font-size: 15px;"></div>
