@@ -39,6 +39,7 @@ function restore_options() {
         antiPrnFilter.checked = items.antiPrnStat;
         suspFilter.checked = items.suspStat;
     });
+    
 }
 span.onclick = function () {
     modal.style.display = "none";
@@ -54,3 +55,11 @@ document.getElementById('save').addEventListener('click', save_options);
 // https://adblock-tester.com/banners/pr_advertising_ads_banner.swf?v=1
 // https://adblock-tester.com/banners/pr_advertising_ads_banner.gif
 // https://adblock-tester.com/banners/pr_advertising_ads_banner.png
+
+// BUG:
+// https://www.bleepingcomputer.com/news/microsoft/windows-10-kb5011831-update-released-with-26-bug-fixes-improvements/
+// Website loaded and content is interactive but it is still spinning:
+// Possibly due to the script below(the scriptis blocked by ub but dosen't show the rule)
+// https://ecdn.analysis.fi/static/js/fab.js - we block this match the filter with ub
+// https://ecdn.firstimpression.io/fi_client.js - we don't block this
+// https://cds.connatix.com/p/159859/connatix.playspace.js

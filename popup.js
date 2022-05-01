@@ -59,12 +59,20 @@ chrome.storage.sync.get(['advStat', 'antiPrnStat', 'suspStat'], function (items)
     });
   }
 });
+// function deleteDomainCookies(domain) {
+//   let cookiesDeleted = 0;
+//   const cookies = chrome.cookies.getAll();
+//   console.log(cookies);
+//   if (cookies.length === 0) {
+//     console.log("No cookies found");
+//   }
+// }
 
 chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
   var domain = tabs[0].url.split("/")[2];
+  // deleteDomainCookies(domain);
   chrome.storage.sync.get('*', function (disabled) {
     chrome.storage.sync.get(domain, function (disabled) {
-      console.log(disabled[domain]);
       if (disabled[domain] == undefined) {
         myShield.checked = true;
         indvShield.classList.remove("pause");
