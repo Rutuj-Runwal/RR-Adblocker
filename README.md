@@ -13,8 +13,9 @@
   </p>
 
 <p align="center">
-<a href="https://mzl.la/3BhY6C9"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox"></a> 
+<a href="https://bit.ly/rradb_chrome"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/chrome.png" alt="RR Adblocker for Chrome"></a>
 <a href="https://bit.ly/rr-adblocker_microsoft-edge"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/edge.png" alt="Get RR Adblocker for Microsoft Edge"></a>
+<a href="https://mzl.la/3BhY6C9"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox"></a> 
 </p>
 
 ***
