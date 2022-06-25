@@ -75,11 +75,10 @@
         .slider.round:before {
             border-radius: 50%;
         }
-
-        .pause{
-            opacity: 0.5;
-        }
-
+        .pause{opacity: 0.5;}
+        .hideNDisable{display: none;}
+        .tick{width: 25px;height: 20px;}
+        .cross{width: 25px;height: 22px;}
         /* Switch css end */
         #showDomain{
             margin-top: 2px;
@@ -107,17 +106,20 @@
         }
         #Openoptions{
             float: right;
-            width: 27px !important;
-            height: 27px !important;
+            width: 15px !important;
+            height: 15px !important;
             cursor: pointer;
+            padding-right: 7px !important;
+            margin-top: 8px !important;
         }
+        
     </style>
 </head>
 
 <body style="width: 230px;">
     <!-- "Intro" -->
     <div>
-        <img src="./setting.png" id="Openoptions">
+        <div id="Openoptions" style="display: flex;flex-direction: column;float: right;align-items: center;justify-content: center;"><img src="./setting.png" ><span style="font-size: 11px;">Settings</span></div>
         <a href="#"
             style="text-decoration:none;display: flex; align-items: center;justify-content: center;color: black;cursor: default;">
             <img src="./RR_logo.png" alt="Logo" style="width: 50px;height: 70px;">
@@ -149,28 +151,34 @@
         <!-- 1st: Connection Upgrade to HTTPS -->
         <div style="display: flex;align-items: center;justify-content: center;">
             <span style="font-size: 115% !important;">Connection Upgrade to HTTPS&nbsp;</span>
-            <label class="switch">
+            <!-- <label class="switch">
                 <input type="checkbox" id="httpUpgrade" checked>
                 <span class="slider round"></span>
-            </label>
+            </label> -->
+            <img src="./icons/tick.jpg" class="tick" alt="on">
+            <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off" >
         </div>
         <br>
         <!-- 2nd: Block ads and Trackers -->
         <div style="display: flex;align-items: center;justify-content: center;">
             <span style="font-size: 115% !important;">Block Trackers and Adverts &nbsp;</span>
-            <label class="switch">
+            <!-- <label class="switch">
                 <input type="checkbox" id="trackerBlock" checked>
                 <span class="slider round"></span>
-            </label>
+            </label> -->
+            <img src="./icons/tick.jpg" class="tick" alt="on">
+            <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off">
         </div>
         <br>
         <!-- 3rd: Malware protection -->
         <div style="display: flex;align-items: center;justify-content: center;">
             <span style="font-size: 115% !important;">Malware Protection[BETA] &nbsp;</span>
-            <label class="switch">
+            <!-- <label class="switch">
                 <input type="checkbox" id="webBlock" checked>
                 <span class="slider round"></span>
-            </label>
+            </label> -->
+            <img src="./icons/tick.jpg" class="tick" alt="on" >
+            <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off" >
         </div>
     </div>
     <br>
@@ -179,13 +187,10 @@
     <div>
         <p style="text-align: center;">
             You are protected against trackers and ads!
-            <br>
-            <a href="https://bit.ly/let_us_connect" target="blank">Learn More</a>
+            <!-- <br> -->
+            <!-- <a href="https://bit.ly/let_us_connect" target="blank">Learn More</a> -->
         </p>
     </div>
-    <br>
-    <div id="showItHere"></div>
-    
     <script src="popup.js"></script>
 </body>
 </html>

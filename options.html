@@ -8,6 +8,10 @@
         body{
             font-size: 20px;
         }
+        .set{
+            padding: 5px;
+            margin: 5px;
+        }
         #modal {
             display: none;
             position: fixed;
@@ -35,7 +39,6 @@
             font-size: 28px;
             font-weight: bold;
         }
-    
         #close:hover,
         #close:focus {
             color: #000;
@@ -45,17 +48,20 @@
         #save{
             border-radius: 20px;
             outline: none;
-            border: none;
             font-size: 17px;
             width: 80px;
             height: 30px;
-            background-color: #0F8C44;
             cursor: pointer;
         }
-        .set{
-            padding: 5px;
-            margin: 5px;
+        .saveBefore{
+            border: 2px solid #0F8C44;
+            background-color: white;
         }
+        .saveAfter{
+            background-color: #0F8C44;
+            border: none;
+        }
+
         #modal{
             pointer-events: none;
         }
@@ -83,7 +89,7 @@
             </p>
         </div>
     </div>
-    
+    <div style="font-weight: bold;font-size: 120% !important;">Enhancement Options</div>
     <div class="set">
         <input type="checkbox" id="useAdv">
         <label for="useAdv">Advanced Filters[Experimental]</label>
@@ -98,9 +104,8 @@
         <!-- <label for="browserblockTPC">Third Party Cookies blocker</label> -->
     </div>
     <div class="set">
-        <div id="status" style="font-size: 15px;"></div>
-        <br>
-        <button id="save">Save</button>
+        <div id="status" style="font-size: 15px;margin-bottom: 7px;"></div>
+        <button id="save" class="saveBefore">Save</button>
     </div>
 
     <script src="options.js"></script>

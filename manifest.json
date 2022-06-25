@@ -1,8 +1,8 @@
 {
     "name": "RR Adblocker",
-    "version": "0.1.3.5",
+    "version": "0.1.4.1",
     "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer.",
-    "permissions": ["tabs","activeTab","declarativeNetRequest","declarativeNetRequestFeedback" , "storage"],
+    "permissions": ["tabs","declarativeNetRequest", "storage"],
     "declarative_net_request": {
       "rule_resources": [
         {
@@ -31,7 +31,7 @@
     "content_scripts": [
       { 
         "js": ["yt_blocks.js","content.js"],
-        "run_at": "document_idle",
+        "run_at": "document_start",
         "matches": ["https://*/*","http://*/*"]
       }
     ],

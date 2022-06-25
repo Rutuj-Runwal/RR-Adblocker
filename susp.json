@@ -16,8 +16,7 @@
                 "ping",
                 "csp_report",
                 "media",
-                "websocket",
-                "image"
+                "websocket"
             ]
         }
     }
