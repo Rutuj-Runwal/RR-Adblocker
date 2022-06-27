@@ -4,6 +4,7 @@ var Google_ResultAdBottom = document.getElementById("bottomads");
 var DDG_ResultAd = document.getElementById("ads");
 
 if (Google_ResultAd != undefined && Google_ResultAd.length != 0) {
+    console.log("DONE!");
     Google_ResultAd.style.display = "none";
 }
 if (Google_ResultAdBottom != undefined && Google_ResultAdBottom.length != 0) {
