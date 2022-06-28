@@ -1,6 +1,7 @@
 [![Commit rate](https://img.shields.io/github/commit-activity/m/Rutuj-Runwal/RR-Adblocker?label=Commits)](https://github.com/Rutuj-Runwal/RR-Adblocker/commits/master)
 [![License](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/Rutuj-Runwal/RR-adblocker/blob/master/LICENSE)
 [![Mozilla Add-ons](https://img.shields.io/amo/rating/rr-adblocker?label=Firefox)](https://addons.mozilla.org/firefox/addon/rr-adblocker/)
+[![Chrome Extension](https://img.shields.io/amo/rating/rr-adblocker?label=Chrome)](https://chrome.google.com/webstore/detail/rr-adblocker/chnhdkklhnokmmcklomnlcmcdbdiaemp)
 
   <h1 align="center">
     <sub>
