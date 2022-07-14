@@ -1,6 +1,6 @@
 # RR Adblocker Patcher 1.0
 ! 1
 U: rutuj.com B
-U: secure.eicar.com B
+U: secure.eicar.org B
 U: trafficjunky.com A
 U: maliciouswebsitetest.com B
