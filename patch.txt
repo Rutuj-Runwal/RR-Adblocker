@@ -1,4 +1,4 @@
-# RR Adblocker Patcher 1.0
+# RR Adblocker Patcher 1.0 - Testing
 ! 1
 U: rutuj.com B
 U: secure.eicar.org B
