@@ -1,4 +1,3 @@
 # RR Adblocker Patcher 1.0
 ! 1
 U: rutuj.com
-R: [0-9]
