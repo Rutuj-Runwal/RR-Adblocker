@@ -23,8 +23,8 @@ RR Adblocker is a free and opensource browser extension based on Manifest V3 tha
 Advanced filters are advanced tracking protection mechanisms that employ new technologies such as regular expression based filtering and will soon apply deeplearning based classification to enhance privacy by blocking and limiting modern tracking methods
 These filters provide a higher level of privacy but are experimental and should be disabled if having issues with any website.
 
-#### What is Adult Content Blocking?
-ACB is aimed towards blocking NSFW content including but not limited to Images,Videos,Iframe embeds,GIF's using regular expression and will soon apply NLP based detection and blocking.
+#### What is Adult Content Blocking(ACB)?
+ACB is aimed towards blocking NSFW content including but not limited to Images,Videos,iframe embeds,GIF's using regular expression and will soon apply Natural Language Processing(NLP) based detection and blocking.
 
 #### How Suspicious Domain Blocking works?
 The current immplementation of Suspicious domain blocking blocks TLD's based on inferences from a dataset with over 10,000+ malicious urls all over the globe sorted on the basis of highest occurence of malware.
