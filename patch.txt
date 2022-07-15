@@ -1,6 +1,4 @@
 # RR Adblocker Patcher 1.0 - Testing
 ! 1
-U: rutuj.com B
-U: secure.eicar.org B
-U: trafficjunky.com A
-U: maliciouswebsitetest.com B
+U: amtso.eicar.org/cloudcar.exe B
+U: amtso.eicar.org/PotentiallyUnwanted.exe B
