@@ -2,3 +2,7 @@
 ! 1
 U: amtso.eicar.org/cloudcar.exe B
 U: amtso.eicar.org/PotentiallyUnwanted.exe B
+U: eviltracker.net B
+U: trackersimulator.org B
+R: .*/zig.js B
+U: do-not-tracker.org B
