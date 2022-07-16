@@ -38,5 +38,5 @@ Suspicious domain blocking will soon employ tensorflow based classification in c
 [Reference](https://www.kaggle.com/code/siddharthkumar25/detect-malicious-url-using-ml/notebook)
   
 #### How does quick fix works?
-RR Adblocker applies dynamic quick fix rules fetched directly from github host. These dynamic rules can provide easy and quick fixes for any sites breakage.
+RR Adblocker applies dynamic quick fix rules fetched directly from host. These dynamic rules can provide easy and quick fixes for any sites breakage.
 If you are stiil facing issues with a website please create a github issue or report here via chrome webstore: [Click Here](https://chrome.google.com/webstore/detail/rr-adblocker/chnhdkklhnokmmcklomnlcmcdbdiaemp/support)
