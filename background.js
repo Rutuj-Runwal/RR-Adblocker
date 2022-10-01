@@ -85,7 +85,7 @@ function fetchProtectionRules(urlToFetch){
             return response.text()
         }
     }).then(function (text) {
-        const urlData = text.split("\n");
+        var urlData = text.split("\n");
         if(urlData.length>=4950){
             urlData = urlData.slice(0,4949);
         }
