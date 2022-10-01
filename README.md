@@ -21,7 +21,8 @@
 
 ***
 
-RR Adblocker is a an open-source browser extension that blocks ads and trackers to make your web surfing faster and safer.
+RR Adblocker is an open-source browser extension and the world's first published adblocker powered by Manifest V3 that blocks ads and trackers to make your web surfing faster and safer.
+
 Out of the box, the extension blocks ads, trackers and malware sites and is powered by [_EasyList_](https://easylist.github.io/#easylist), [_EasyPrivacy_](https://easylist.github.io/#easyprivacy), [_Online Malicious URL Blocklist_](https://gitlab.com/curben/urlhaus-filter#urlhaus-malicious-url-blocklist)
 
 ![User iterface](https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/assets/1.png)
@@ -54,9 +55,12 @@ When the extension is enabled the site is blocked.
 Disable the extension and visit the same site! (Disclamer: The EICAR site is "safe" but we recommend you to keep Malware protection turned on!)
 
 
+![](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/RR%20Github%20Preview.png)
+
 ## References:
 - Chrome Docs: [Extension Ref](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/)
 - Ad blocking: [EasyList](https://easylist.to/)
 - Trackers Blocking: [Fnb](https://secure.fanboy.co.nz/)
 - Malware Blocking: [UrlHaus](https://gitlab.com/curben/urlhaus-filter)
 - HTTPS upgrade: [EFF](https://github.com/EFForg/https-everywhere/tree/master/docs)
+
