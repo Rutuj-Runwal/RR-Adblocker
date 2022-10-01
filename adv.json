@@ -349,5 +349,124 @@
                 "image"
             ]
         }
+    },
+    {
+        "id": 17,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "\/fingerprint.js$",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 18,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "[0-9a-f]{32}\/invoke.js$",
+            "resourceTypes": [
+                "main_frame",
+                "sub_frame",
+                "stylesheet",
+                "script",
+                "xmlhttprequest",
+                "ping",
+                "csp_report",
+                "media",
+                "websocket",
+                "image"
+            ]
+        }
+    },
+    {
+        "id": 19,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||play.google.com/log?",
+            "resourceTypes": ["xmlhttprequest"]
+        }
+    },
+    {
+        "id": 20,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": ".*\/fingerprint2.js$",
+            "resourceTypes": ["script"]
+        }
+    },
+    {
+        "id": 21,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "[a-z.\/]+[a-zA-Z]{0,30}\/[0-9]{5}$",
+            "resourceTypes": [
+                "script"
+            ]
+        }
+    },
+    {
+        "id": 22,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": "^.*\/_xa\/ads_batch.*",
+            "resourceTypes": [
+                "script"
+            ]
+        }
+    },
+    {
+        "id": 23,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "regexFilter": ".*/ht.js?site_.*",
+            "resourceTypes": [
+                "script"
+            ]
+        }
+    },
+    {
+        "id": 24,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||adthrive.com^",
+            "resourceTypes": [
+                "main_frame",
+                "script"
+            ]
+        }
     }
 ]

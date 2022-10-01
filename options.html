@@ -73,6 +73,78 @@
             width:17px;
             height:17px;
         }
+        .stlBtn{
+            background-color: #0F8C44;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 550;
+            width: 300px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .stlBtn2 {
+            width: 330px;
+            height: 40px;
+            padding: 10px 25px;
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            border-radius: 20px;
+        }
+        .btn-15 {
+            background: #0F8C44;
+            color: black;
+            z-index: 1;
+        }
+        .btn-15:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            background: #e0e5ec;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
+        .btn-15:hover {color: #000;}
+        .btn-15:hover:after {
+            left: 0;
+            width: 100%;
+        }
+        .btn-15:active {top: 2px;}
+        .btn-16 {
+            background: #0F8C44;
+            color: black;
+            z-index: 1;
+        }
+        .btn-16:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 100%;
+            top: 0;
+            left: 0;
+            direction: rtl;
+            z-index: -1;
+            background: #e0e5ec;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
+        .btn-16:hover {color: #000;}
+        .btn-16:hover:after {
+            left: auto;
+            right: 0;
+            width: 100%;
+        }
+        .btn-16:active {top: 2px;}
     </style>
 </head>
 
@@ -89,23 +161,58 @@
             </p>
         </div>
     </div>
-    <div style="font-weight: bold;font-size: 120% !important;">Enhancement Options</div>
-    <div class="set">
-        <input type="checkbox" id="useAdv">
-        <label for="useAdv">Advanced Filters[Experimental]</label>
-        <br>
-        <input type="checkbox" id="useAntiPrn">
-        <label for="useAntiPrn">Adult Content Blocking</label>
-        <br>
-        <input type="checkbox" id="useSuspBlock">
-        <label for="useSuspBlock">Suspicious Domain Blocker</label>
-        <!-- <br>
-        <input type="checkbox" id="browserblockTPC"> -->
-        <!-- <label for="browserblockTPC">Third Party Cookies blocker</label> -->
-    </div>
-    <div class="set">
-        <div id="status" style="font-size: 15px;margin-bottom: 7px;"></div>
-        <button id="save" class="saveBefore">Save</button>
+    <div style="display: flex;flex-direction: row;justify-content:space-between;">
+        <div style="display: flex;flex-direction:column">
+            <div style="font-weight: bold;font-size: 120% !important;">Enhancement Options</div>
+            <div style="font-size: 13px;">Make sure to "Save" the options after changes.</div>
+            <div class="set">
+                <input type="checkbox" id="useAdv">
+                <label for="useAdv">Advanced Filters[Experimental]</label>
+                <br>
+                <input type="checkbox" id="useAntiPrn">
+                <label for="useAntiPrn">Adult Content Blocking</label>
+                <br>
+                <input type="checkbox" id="useSuspBlock">
+                <label for="useSuspBlock">Suspicious Domain Blocker</label>
+                <!-- <br>
+                <input type="checkbox" id="browserblockTPC"> -->
+                <!-- <label for="browserblockTPC">Third Party Cookies blocker</label> -->
+            </div>
+            <div class="set">
+                <div id="status" style="font-size: 15px;margin-bottom: 7px;"></div>
+                <button id="save" class="saveBefore">Save</button>
+            </div>
+            <br />
+            <div style="font-size: 16px;margin-bottom: 4px;">Get the latest quick fix filters<a href="https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/FAQ.md#how-does-quick-fix-works" target="_blank" style="text-decoration:none;">[Learn More]</a></div>
+            <button id="updtchk" class="stlBtn">Check for Updates</button>
+        </div>
+
+        <div id="about">
+            <h3>About</h3>
+            <div class="set">
+                RR Adblocker is an open-source browser addon that 
+                <br>
+                blocks ads and trackers to make your web surfing faster and safer.
+                <br>
+                It aims at creating a safe, private internet experience and is completely free.
+                <br>
+                <div style="margin-bottom:3% !important;">No Telemetry.<br>No "Anonymous" Usage Statistics.<br>No Donations</div>
+                Have a suggestion?
+                <br>
+                <a style="text-decoration:none;" href="https://chrome.google.com/webstore/detail/rr-adblocker/chnhdkklhnokmmcklomnlcmcdbdiaemp/review" target="_blank"><button class="stlBtn2 btn-16">Drop suggestions</button></a>
+                <br><br>
+                <p style="margin-bottom:7px !important;">Found a Bug/Issue?<br>Reporting Options:</p>
+                <a style="text-decoration:none;" href="https://bit.ly/rradb_git" target="_blank"><button class="stlBtn2 btn-15">Create an issue on Github</button></a>
+                <br>
+                <br>
+                <a style="text-decoration:none;"
+                    href="https://chrome.google.com/webstore/detail/rr-adblocker/chnhdkklhnokmmcklomnlcmcdbdiaemp/support" target="_blank"><button class="stlBtn2 btn-16">Report through Chrome Webstore</button></a>
+                <div style="margin-top: 20px !important;font-size:7px;display: none;" id="linkCredit">
+                    <a target="_blank" href="https://icons8.com/icon/2969/settings">Settings</a> icon by <a target="_blank"
+                        href="https://icons8.com">Icons8</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="options.js"></script>

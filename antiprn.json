@@ -94,7 +94,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": ".*(hentai|webcamsex|chudai|gand).*",
+            "regexFilter": ".*(hentai|webcamsex|chudai).*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",
@@ -226,7 +226,7 @@
             "type": "block"
         },
         "condition": {
-            "regexFilter": ".*(cock|cumshot|nude|nudity|pussy|lesbian|stepmom|sucking).*",
+            "regexFilter": ".*(cock|cumshot|nude|nudity|pussy|sucking).*",
             "resourceTypes": [
                 "main_frame",
                 "sub_frame",

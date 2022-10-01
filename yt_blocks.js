@@ -64,34 +64,239 @@ window.addEventListener("load", function () {
         // was supposed to be displayed, the below lines hide those empty containers and make page formatting better.
         // The below code runs when the shield's are turned on by the user
         try {
+            if (!window.location.hostname.includes("crunchyroll")){
+            var addepthLimit = 3;
             chrome.storage.sync.get('*', function (disabled) {
                 if (disabled['*']) return;
                 chrome.storage.sync.get(domain, function (disabled) {
                     if (disabled[domain]) return;
                     else {
-                        document.querySelectorAll('[class*="advertisement"]').forEach(el => { console.log(el); el.remove() });
-                        document.querySelectorAll('[id*="advertisement"]').forEach(el => { console.log(el); el.remove() });
+                        document.querySelectorAll('[class*="advertisement"]').forEach(el => {
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }});
+                        document.querySelectorAll('[id*="advertisement"]').forEach(el => { 
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                         });
 
-                        document.querySelectorAll('[class^="ads-"]').forEach(el => { console.log(el); el.remove() });
-                        document.querySelectorAll('[class^="ads_"]').forEach(el => { console.log(el); el.remove() });
+                        document.querySelectorAll('[class^="ads-"]').forEach(el => {
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                        });
+                        document.querySelectorAll('[class^="ads_"]').forEach(el => { 
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                        });
 
-                        document.querySelectorAll('[class^="ad-"]').forEach(el => { console.log(el); el.remove() });
-                        document.querySelectorAll('[class^="ad_"]').forEach(el => { console.log(el); el.remove() });
+                        document.querySelectorAll('[class^="ad-"]').forEach(el => { 
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children);
+                                    if(collection[i].children){
+                                        if(collection[i].children.length>addepthLimit){
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if(flag){
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                        });
+                        document.querySelectorAll('[class^="ad_"]').forEach(el => { 
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                         });
 
+                        document.querySelectorAll('[class$="_ads"]').forEach(el => { 
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                         });
+                        document.querySelectorAll('[class$="-ads"]').forEach(el => { 
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                         });
 
-                        document.querySelectorAll('[class$="_ads"]').forEach(el => { console.log(el); el.remove() });
-                        document.querySelectorAll('[class$="-ads"]').forEach(el => { console.log(el); el.remove() });
+                        document.querySelectorAll('[class$="-ad"]').forEach(el => { 
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                         });
+                        document.querySelectorAll('[class$="_ad"]').forEach(el => { 
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                         });
 
-                        document.querySelectorAll('[class$="-ad"]').forEach(el => { console.log(el); el.remove() });
-                        document.querySelectorAll('[class$="_ad"]').forEach(el => { console.log(el); el.remove() });
-
-                        document.querySelectorAll('[class*="adsbygoogle"]').forEach(el => { console.log(el); el.remove() });
-                        document.querySelectorAll('[id*="adsbygoogle"]').forEach(el => { console.log(el); el.remove() });
-                        // .forEach(el => { console.log(el); el.remove() });
+                        document.querySelectorAll('[class*="adsbygoogle"]').forEach(el => { 
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                         });
+                        document.querySelectorAll('[id*="adsbygoogle"]').forEach(el => {
+                            var collection = el.children;
+                            var flag = true;
+                            if (collection.length <= addepthLimit) {
+                                for (var i = 0; i < collection.length; i++) {
+                                    // console.log(collection[i].children.length);
+                                    if (collection[i].children) {
+                                        if (collection[i].children.length > addepthLimit) {
+                                            flag = false;
+                                        }
+                                    }
+                                }
+                                if (flag) {
+                                    console.log(el);
+                                    el.remove();
+                                }
+                            }
+                         });
                     }
                 });
             });
+        }
         } catch (err) {
+            console.log(err);
         }
         
     }, 700);
