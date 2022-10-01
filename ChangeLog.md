@@ -1,3 +1,9 @@
+### Get RR Adblocker today
+<p align="center">
+<a href="https://bit.ly/rradb_chrome"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/chrome.png" alt="RR Adblocker for Chrome"></a>
+<a href="https://bit.ly/rr-adblocker_microsoft-edge"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/edge.png" alt="Get RR Adblocker for Microsoft Edge"></a>
+</p>
+
 ## Changelog:
 v0.1.6.1 [Latest]
 - Bug Fixes and Stability Improvements
