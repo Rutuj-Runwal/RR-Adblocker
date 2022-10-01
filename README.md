@@ -31,7 +31,7 @@ Out of the box, the extension blocks ads, trackers and malware sites and is powe
 - Trackers Blocking
 - Adverts Blocking
 - Malware Protection[BETA]
-- Phishing Protectiong[BETA]
+- Phishing Protection[BETA]
 
 
 ### Advert and Trackers blocking
@@ -52,7 +52,7 @@ When the extension is enabled the site is blocked.
 
 ![Malware Blocking](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/5.png)
 
-Disable the extension and visit the same site! (Disclamer: The EICAR site is "safe" but we recommend you to keep Malware protection turned on!)
+Disable the extension and visit the same site! (Disclaimer: The EICAR site is "safe" but we recommend you to keep Malware protection turned on!)
 
 
 ![](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/RR%20Github%20Preview.png)
