@@ -4,7 +4,7 @@
 <a href="https://bit.ly/rr-adblocker_microsoft-edge"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/edge.png" alt="Get RR Adblocker for Microsoft Edge"></a>
 </p>
 
-## Changelog:
+## Change Log:
 v0.1.6.1 [Latest]
 - Bug Fixes and Stability Improvements
 
