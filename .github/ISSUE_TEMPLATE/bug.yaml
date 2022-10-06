@@ -17,3 +17,18 @@ body:
       description: Please add screenshots if applicable
     validations:
       required: false
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: "Browsers"
+      description: What browser are you seeing the problem on ?
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Microsoft Edge
+        - Opera
+        - Brave
+    validations:
+      required: false
