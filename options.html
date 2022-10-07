@@ -149,6 +149,7 @@
         .tooltip {
             position: relative;
             cursor: pointer;
+            display: inline-block;
         }
 
         .tooltip::before,
@@ -178,6 +179,7 @@
             color: #fff;
             top: 30px;
             left: 0;
+            white-space: nowrap;
         }
 
         .tooltip:hover::before{
@@ -190,6 +192,11 @@
             top: 36px;
             opacity: 1;
             z-index: 100;
+        }
+
+        .info {
+            width:17px;
+            height:17px;
         }
     </style>
 </head>
@@ -213,13 +220,22 @@
             <div style="font-size: 13px;">Make sure to "Save" the options after changes.</div>
             <div class="set">
                 <input type="checkbox" id="useAdv">
-                <label class="tooltip" data-tooltip="Using advanced filter but this is experimental" for="useAdv">Advanced Filters[Experimental]</label>
+                <label for="useAdv">Advanced Filters[Experimental]</label>
+                <span class="tooltip" data-tooltip="Using advanced filter but this is experimental">
+                    <img class="info" src="./icons/info.png" />
+                </span>
                 <br>
                 <input type="checkbox" id="useAntiPrn">
-                <label class="tooltip" data-tooltip="Blocking adult page" for="useAntiPrn">Adult Content Blocking</label>
+                <label  for="useAntiPrn">Adult Content Blocking</label>
+                <span class="tooltip" data-tooltip="Blocking adult page">
+                    <img class="info" src="./icons/info.png" />
+                </span>
                 <br>
                 <input type="checkbox" id="useSuspBlock">
-                <label class="tooltip" data-tooltip="Blocking suspicious domain page" for="useSuspBlock">Suspicious Domain Blocker</label>
+                <label  for="useSuspBlock">Suspicious Domain Blocker</label>
+                <span class="tooltip" data-tooltip="Blocking suspicious domain page">
+                    <img class="info" src="./icons/info.png" />
+                </span>
                 <!-- <br>
                 <input type="checkbox" id="browserblockTPC"> -->
                 <!-- <label for="browserblockTPC">Third Party Cookies blocker</label> -->
