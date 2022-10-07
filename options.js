@@ -5,6 +5,7 @@ var advFilter = document.getElementById('useAdv');
 var antiPrnFilter = document.getElementById('useAntiPrn');
 var suspFilter = document.getElementById('useSuspBlock');
 var updtBtn = document.getElementById('updtchk');
+var checkStateChanged = false;
 // Saves options to chrome.storage
 function save_options() {
     var useAdv = document.getElementById('useAdv').checked;
@@ -42,6 +43,8 @@ function save_options() {
     if (!useSusp) {
         chrome.declarativeNetRequest.updateEnabledRulesets({
             disableRulesetIds: ["suspLIST"]});}
+
+    checkStateChanged = false;
 }
 advFilter.onclick = function () {
     if (advFilter.checked){modal.style.display = "block";}
@@ -177,3 +180,18 @@ if(updtBtn){
 }
 document.addEventListener('DOMContentLoaded', restore_options);
 document.getElementById('save').addEventListener('click', save_options);
+
+function add_state_change_listener(element) {
+    element.addEventListener('change', e => {
+        checkStateChanged = true;
+    });
+}
+add_state_change_listener(advFilter);
+add_state_change_listener(antiPrnFilter);
+add_state_change_listener(suspFilter);
+window.addEventListener('beforeunload', function (event) {
+    if (checkStateChanged) {
+        event.preventDefault();
+        event.returnValue = '';
+    }
+});
