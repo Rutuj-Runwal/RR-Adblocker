@@ -90,7 +90,8 @@ myShield.addEventListener("change", function () {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     var domain = tabs[0].url.split("/")[2];
     myShield.checked ? disabled[domain] = false : disabled[domain] = true;
-    chrome.storage.sync.set(disabled, disabled[domain]);
+    console.log(disabled);
+    chrome.storage.sync.set(disabled);
     chrome.storage.sync.get(domain, function (disabled) {
       if (disabled[domain] == undefined) {
         myShield.checked = true;
