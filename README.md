@@ -64,3 +64,8 @@ Disable the extension and visit the same site! (Disclaimer: The EICAR site is "s
 - Malware Blocking: [UrlHaus](https://gitlab.com/curben/urlhaus-filter)
 - HTTPS upgrade: [EFF](https://github.com/EFForg/https-everywhere/tree/master/docs)
 
+## Contributors
+
+<a href = "https://github.com/Rutuj-Runwal/RR-Adblocker/graphs/contributors">
+  <img src = "https://contrib.rocks/image?repo=Rutuj-Runwal/RR-Adblocker"/>
+</a>
