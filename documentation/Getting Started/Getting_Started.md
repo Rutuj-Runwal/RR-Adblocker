@@ -37,9 +37,11 @@ Install the extension for your browser:
 ### Head over to issues to start contribution
 
 #### Website:
-https://rutuj-runwal.github.io/RRAdblocker/
-Found issues with website?
-Website for RR-Adblocker has a separate repository.
+https://rutuj-runwal.github.io/RRAdblocker/ <br>
+##### Found issues with website?<br>
+Website for RR-Adblocker has a separate repository.<br>
 Contribute here - https://github.com/Rutuj-Runwal/RRAdblocker
+
+
 
 Glad to have you here😄
