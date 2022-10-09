@@ -17,8 +17,3 @@ body:
       description: Screenshots if applicable
     validations:
       required: false
-  - type: text
-    id: guide
-    attributes:
-      label: Check out the getting started guide here: Check out the getting started guide here:
-https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/documentation/Getting%20Started/Getting_Started.md
