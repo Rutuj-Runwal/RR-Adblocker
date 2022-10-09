@@ -4,9 +4,12 @@
 <head>
     <title>RR Adblocker Config</title>
     <style>
-        
+        @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
         body{
             font-size: 20px;
+
+            font-family: 'League Spartan', sans-serif;
         }
         .set{
             padding: 5px;
@@ -198,15 +201,24 @@
             width:17px;
             height:17px;
         }
+        
+
+        .contributor:hover{
+            transform: scale(1.1);
+        }
+        
     </style>
 </head>
 <body>
-    <h1 style="text-align:center">Contributors</h1>
-    <h3 style="text-align: center">Thank you for improving this project</h3>
-    <br>
+<main>
+    <div style="text-align:center">
+        <h1 >Contributors</h1>
+        <h3>Thank you for improving this project</h3>
+    </div>
+
   
     <!--Dynammically adjusts HTML data using contributors.js file-->
-         <div id="contributor" style="display: flex; flex-wrap: wrap;">
+         <div id="contributor" style="display: flex; flex-wrap: wrap; justify-content: center; ">
             <div class="contributor" style="margin: 8px; justify-content: center;">
                 <span style="border-bottom: 3px solid black; text-align: center; padding: 6px; margin: 5px;"></span>
                 <br>
@@ -217,6 +229,7 @@
          </div>
     
     </div>
+</main>
 
 
     <script src="contributors.js"></script>
