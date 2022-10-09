@@ -32,8 +32,8 @@ body:
         - Brave
     validations:
       required: false
- - type: markdown
-  attributes:
-    value: |
-      ## New to the Project? 
-      Check out the getting started guide: https://bit.ly/rr-gettingStarted
+  - type: markdown
+    attributes:
+      value: |
+       ## New to the Project? 
+       Check out the getting started guide: https://bit.ly/rr-gettingStarted
