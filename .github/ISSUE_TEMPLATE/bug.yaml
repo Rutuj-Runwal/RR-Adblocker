@@ -1,6 +1,6 @@
 name: 🐛 Bug
 description: Report an issue to help improve the project.
-title: '⚒ <description>'
+title: '⚒ <Description>'
 labels: ['bug']
 body:
   - type: textarea
