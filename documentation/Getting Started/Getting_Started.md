@@ -21,6 +21,13 @@ Install the extension for your browser:
   &nbsp;&nbsp;&nbsp;
 <a href="https://mzl.la/3BhY6C9"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox"></a> 
 </p>
+<br/>
+
+ - Clone the repository. It contains all the necessary files for the extension
+- Head over to `chrome://extensions` in your browser
+- Enable Developer Mode(top right-corner toggle)
+- Click on "Load Unpacked" and select the cloned folder
+- Now, you have a local instance of RR-Adblocker set up 
 
 #### Check out the various options(settings menu etc) via the popup of extension
 ![image](https://user-images.githubusercontent.com/59436520/194697111-9bd74c2a-35b7-404f-b4c4-9f4631cc051a.png)
@@ -28,3 +35,11 @@ Install the extension for your browser:
 ### You're all set! 
 <br />
 ### Head over to issues to start contribution
+
+#### Website:
+https://rutuj-runwal.github.io/RRAdblocker/
+Found issues with website?
+Website for RR-Adblocker has a separate repository.
+Contribute here - https://github.com/Rutuj-Runwal/RRAdblocker
+
+Glad to have you here😄
