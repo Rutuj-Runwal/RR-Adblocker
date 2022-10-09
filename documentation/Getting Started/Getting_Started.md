@@ -33,7 +33,6 @@ Install the extension for your browser:
 ![image](https://user-images.githubusercontent.com/59436520/194697111-9bd74c2a-35b7-404f-b4c4-9f4631cc051a.png)
 
 ### You're all set! 
-<br />
 ### Head over to issues to start contribution
 
 #### Website:
