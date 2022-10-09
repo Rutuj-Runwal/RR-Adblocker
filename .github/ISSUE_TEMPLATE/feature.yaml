@@ -17,3 +17,8 @@ body:
       description: Screenshots if applicable
     validations:
       required: false
+  - type: markdown
+    attributes:
+      value: |
+        New to the Project? <br>
+        Check out the getting started guide: https://bit.ly/rr-gettingStarted
