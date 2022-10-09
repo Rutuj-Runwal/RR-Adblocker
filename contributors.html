@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RR Adblocker Config</title>
+    <style>
+        
+        body{
+            font-size: 20px;
+        }
+        .set{
+            padding: 5px;
+            margin: 5px;
+        }
+        #modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left:0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        #modal-content {
+            font-size: 16px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+        }
+        #close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        #close:hover,
+        #close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #save{
+            border-radius: 20px;
+            outline: none;
+            font-size: 17px;
+            width: 80px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .saveBefore{
+            border: 2px solid #0F8C44;
+            background-color: white;
+        }
+        .saveAfter{
+            background-color: #0F8C44;
+            border: none;
+        }
+
+        #modal{
+            pointer-events: none;
+        }
+
+        #modal-content{
+            pointer-events: all;
+        }
+        input[type='checkbox'] {
+            width:17px;
+            height:17px;
+        }
+        .stlBtn{
+            background-color: #0F8C44;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 550;
+            width: 300px;
+            height: 30px;
+            cursor: pointer;
+        }
+        .stlBtn2 {
+            width: 330px;
+            height: 40px;
+            padding: 10px 25px;
+            font-weight: 600;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            border-radius: 20px;
+        }
+        .btn-15 {
+            background: #0F8C44;
+            color: black;
+            z-index: 1;
+        }
+        .btn-15:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 100%;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            background: #e0e5ec;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
+        .btn-15:hover {color: #000;}
+        .btn-15:hover:after {
+            left: 0;
+            width: 100%;
+        }
+        .btn-15:active {top: 2px;}
+        .btn-16 {
+            background: #0F8C44;
+            color: black;
+            z-index: 1;
+        }
+        .btn-16:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 100%;
+            top: 0;
+            left: 0;
+            direction: rtl;
+            z-index: -1;
+            background: #e0e5ec;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
+        .btn-16:hover {color: #000;}
+        .btn-16:hover:after {
+            left: auto;
+            right: 0;
+            width: 100%;
+        }
+        .btn-16:active {top: 2px;}
+        
+        .tooltip {
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .tooltip::before,
+        .tooltip::after {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: -1;
+        }
+
+        .tooltip::before {
+            content: "";
+            border: 10px solid transparent;
+            border-bottom-color: #000;
+            top: 10px;
+            left: 10px;
+        }
+
+        .tooltip::after {
+            content: attr(data-tooltip);
+            display: block;
+            padding: 7px 13px;
+            background: #000;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+            top: 30px;
+            left: 0;
+            white-space: nowrap;
+        }
+
+        .tooltip:hover::before{
+            top: 16px;
+            opacity: 1;
+            z-index: 100;
+        }
+
+        .tooltip:hover::after{
+            top: 36px;
+            opacity: 1;
+            z-index: 100;
+        }
+
+        .info {
+            width:17px;
+            height:17px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Contributors</h1>
+    <h3 style="text-align: center">Thank you for improving this project</h3>
+    <br>
+  
+    <!--Dynammically adjusts HTML data using contributors.js file-->
+         <div id="contributor" style="display: flex; flex-wrap: wrap;">
+            <div class="contributor" style="margin: 8px; justify-content: center;">
+                <span style="border-bottom: 3px solid black; text-align: center; padding: 6px; margin: 5px;"></span>
+                <br>
+                <a href="" target="_blank">
+                    <img src="" alt="" style="width: 150px; border-radius: 50%; cursor: pointer; margin-top: 15px;">
+                </a>
+            </div>
+         </div>
+    
+    </div>
+
+
+    <script src="/RR-Adblocker/contributors.js"></script>
+</body>
+</html>
