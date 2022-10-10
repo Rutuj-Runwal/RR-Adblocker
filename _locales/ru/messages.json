@@ -1,0 +1,38 @@
+{
+  "appName": {
+    "message": "блокировщик рекламы РР",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "appDesc": {
+    "message": "Adblocker от Rutuj Runwal блокирует рекламу и трекеры, чтобы сделать ваш веб-серфинг быстрее и безопаснее.",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "optionsName":{
+    "message":"Опции улучшения",
+    "description":"Label for Options Page Heading"
+  },
+  "saveOptionsPromptLabel":{
+    "message":"Обязательно сохраните параметры после изменений.",
+    "description":"Label for save options prompt"
+  },
+  "advFilterLabel":{
+    "message":"Расширенные фильтры[Экспериментальный]",
+    "description":"Label for Advanced Filter option"
+  },
+  "antiprnFilterLabel":{
+    "message":"Блокировка контента для взрослых",
+    "description":"Label for Adult Content Blocking option"
+  },
+  "suspFilterLabel":{
+    "message":"Расширенные фильтры[Экспериментальный]",
+    "description":"Label for Advanced Filter option"
+  },
+  "updateInfoLabel":{
+    "message":"Получить последние фильтры быстрого исправления",
+    "description":"Label for update info prompt"
+  },
+  "aboutLabel":{
+    "message":"Он направлен на создание безопасного и приватного доступа в Интернет и является абсолютно бесплатным.",
+    "description":"Label for About Section"
+  }
+}
