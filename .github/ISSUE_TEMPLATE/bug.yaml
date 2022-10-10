@@ -3,6 +3,11 @@ description: Report an issue to help improve the project.
 title: '⚒ <Description>'
 labels: ['bug']
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
   - type: textarea
     id: description
     attributes:
