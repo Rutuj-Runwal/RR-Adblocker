@@ -57,6 +57,9 @@ Disable the extension and visit the same site! (Disclaimer: The EICAR site is "s
 
 ![](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/RR%20Github%20Preview.png)
 
+## New to the Project? 
+Check out the getting started guide: https://bit.ly/rr-gettingStarted
+
 ## References:
 - Chrome Docs: [Extension Ref](https://developer.chrome.com/docs/extensions/reference/declarativeNetRequest/)
 - Ad blocking: [EasyList](https://easylist.to/)
