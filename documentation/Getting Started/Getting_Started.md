@@ -30,7 +30,7 @@ Install the extension for your browser:
 - Now, you have a local instance of RR-Adblocker set up 
 
 #### Check out the various options(settings menu etc) via the popup of extension
-![image](https://user-images.githubusercontent.com/59436520/194697111-9bd74c2a-35b7-404f-b4c4-9f4631cc051a.png)
+![RR Adblocker Popup UI](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/RR_Adblocker_Popup_Illustration.png)
 
 ### You're all set! 
 ### Head over to issues to start contribution
