@@ -6,7 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+       ## New to the Project? 
+       Check out the getting started guide: https://bit.ly/rr-gettingStarted
+
   - type: textarea
     id: description
     attributes:
@@ -36,8 +38,3 @@ body:
         - Brave
     validations:
       required: false
-  - type: markdown
-    attributes:
-      value: |
-       ## New to the Project? 
-       Check out the getting started guide: https://bit.ly/rr-gettingStarted
