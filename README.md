@@ -72,3 +72,5 @@ Check out the getting started guide: https://bit.ly/rr-gettingStarted
 <a href = "https://github.com/Rutuj-Runwal/RR-Adblocker/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=Rutuj-Runwal/RR-Adblocker"/>
 </a>
+
+<h3 align="center">⭐Don't forget to leave a star!!⭐</h3>
