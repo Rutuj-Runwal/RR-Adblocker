@@ -1,7 +1,8 @@
 {
-    "name": "RR Adblocker",
+    "name": "__MSG_appName__",
     "version": "0.1.6.1",
-    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer.",
+    "description": "__MSG_appDesc__",
+    "default_locale": "en",
     "permissions": ["tabs","declarativeNetRequest", "storage"],
     "declarative_net_request": {
       "rule_resources": [
