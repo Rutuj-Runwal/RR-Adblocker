@@ -3,6 +3,12 @@ description: Report an issue to help improve the project.
 title: '⚒ <Description>'
 labels: ['bug']
 body:
+  - type: markdown
+    attributes:
+      value: |
+       ## New to the Project? 
+       Check out the getting started guide: https://bit.ly/rr-gettingStarted
+
   - type: textarea
     id: description
     attributes:

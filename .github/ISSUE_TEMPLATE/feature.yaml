@@ -17,3 +17,10 @@ body:
       description: Screenshots if applicable
     validations:
       required: false
+  - type: markdown
+    attributes:
+      value: |
+        ## New to the Project? 
+        Check out the getting started guide: https://bit.ly/rr-gettingStarted
+    validations: 
+      required:true
