@@ -1,0 +1,38 @@
+{
+  "appName": {
+    "message": "RR Adblocker",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "appDesc": {
+    "message": "Adblocker Rutuj Runwal memblokir iklan dan pelacak untuk membuat web Anda berselancar lebih cepat dan lebih aman.",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "optionsName":{
+    "message":"Opsi Peningkatan",
+    "description":"Label for Options Page Heading"
+  },
+  "saveOptionsPromptLabel":{
+    "message":"Pastikan untuk Menyimpan opsi setelah anda merubahnya.",
+    "description":"Label for save options prompt"
+  },
+  "advFilterLabel":{
+    "message":"Filter Lanjutan[Experimental].",
+    "description":"Label for Advanced Filter option"
+  },
+  "antiprnFilterLabel":{
+    "message":"Blokir Akses Konten Dewasa.",
+    "description":"Label for Adult Content Blocking option"
+  },
+  "suspFilterLabel":{
+    "message":"Filter Lanjutan[Experimental].",
+    "description":"Label for Advanced Filter option"
+  },
+  "updateInfoLabel":{
+    "message":"Perbarui Filter Terbaru Anda Agar Lebih Cepat.",
+    "description":"Label for update info prompt"
+  },
+  "aboutLabel":{
+    "message":"Ini bertujuan untuk menciptakan pengalaman internet pribadi yang aman dan sepenuhnya gratis.",
+    "description":"Label for About Section"
+  }
+}
