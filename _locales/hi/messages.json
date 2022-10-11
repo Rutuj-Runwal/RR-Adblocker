@@ -1,6 +1,6 @@
 {
   "appName": {
-    "message": "आर आर एडब्लॉकर",
+    "message": "RR Adblocker",
     "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
   },
   "appDesc": {
@@ -32,7 +32,7 @@
     "description":"Label for update info prompt"
   },
   "aboutLabel":{
-    "message":"इसका उद्देश्य एक सुरक्षित, निजी इंटरनेट अनुभव बनाना है और यह पूरी तरह से मुफ़्त है।",
+    "message":"इसका उद्देश्य एक सुरक्षित, प्राइवेट इंटरनेट का अनुभव देना है और यह पूरी तरह से मुफ़्त है।",
     "description":"Label for About Section"
   }
 }
