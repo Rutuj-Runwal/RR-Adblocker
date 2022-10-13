@@ -34,7 +34,7 @@ body:
         - Firefox
         - Safari
         - Microsoft Edge
-        - Opera
         - Brave
+        - Kiwi (Android)
     validations:
       required: false
