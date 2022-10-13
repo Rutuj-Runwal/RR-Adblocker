@@ -1,0 +1,38 @@
+{
+  "appName": {
+    "message": "RR Adblocker",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "appDesc": {
+    "message": "તમારા વેબ સર્ફિંગને વધુ ઝડપી અને સુરક્ષિત બનાવવા માટે રૂતુજ રુનવાલનું એડબ્લોકર જાહેરાતો અને ટ્રેકર્સને બ્લોક કરે છે.",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "optionsName":{
+    "message":"ઉન્નતીકરણ વિકલ્પો",
+    "description":"Label for Options Page Heading"
+  },
+  "saveOptionsPromptLabel":{
+    "message":"ફેરફારો પછી વિકલ્પો સાચવવાની ખાતરી કરો.",
+    "description":"Label for save options prompt"
+  },
+  "advFilterLabel":{
+    "message":"અદ્યતન ફિલ્ટર્સ[પ્રાયોગિક]",
+    "description":"Label for Advanced Filter option"
+  },
+  "antiprnFilterLabel":{
+    "message":"પુખ્ત સામગ્રી અવરોધિત",
+    "description":"Label for Adult Content Blocking option"
+  },
+  "suspFilterLabel":{
+    "message":"અદ્યતન ફિલ્ટર્સ[પ્રાયોગિક]",
+    "description":"Label for Advanced Filter option"
+  },
+  "updateInfoLabel":{
+    "message":"નવીનતમ ઝડપી ફિક્સ ફિલ્ટર્સ મેળવો",
+    "description":"Label for update info prompt"
+  },
+  "aboutLabel":{
+    "message":"તેનો હેતુ એક સુરક્ષિત, ખાનગી ઇન્ટરનેટ અનુભવ બનાવવાનો છે અને તે સંપૂર્ણપણે મફત છે.",
+    "description":"Label for About Section"
+  }
+}
