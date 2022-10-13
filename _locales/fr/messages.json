@@ -1,0 +1,38 @@
+{
+  "appName": {
+    "message": "RR Adblocker",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "appDesc": {
+    "message": "Rutuj Runwal's Adblocker bloque les publicités et les trackers pour rendre votre navigation sur le Web plus rapide et plus sûre.",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "optionsName":{
+    "message":"Options d'amélioration",
+    "description":"Label for Options Page Heading"
+  },
+  "saveOptionsPromptLabel":{
+    "message":"Assurez-vous d'enregistrer les options après les modifications.",
+    "description":"Label for save options prompt"
+  },
+  "advFilterLabel":{
+    "message":"Filtres avancés[Expérimental]] ",
+    "description":"Label for Advanced Filter option"
+  },
+  "antiprnFilterLabel":{
+    "message":"Blocage de contenu pour adultes",
+    "description":"Label for Adult Content Blocking option"
+  },
+  "suspFilterLabel":{
+    "message":"Filtres avancés[Expérimental] ",
+    "description":"Label for Advanced Filter option"
+  },
+  "updateInfoLabel":{
+    "message":"Obtenez les derniers filtres de correction rapide",
+    "description":"Label for update info prompt"
+  },
+  "aboutLabel":{
+    "message":"Il vise à créer une expérience Internet sûre et privée et est entièrement gratuit.",
+    "description":"Label for About Section"
+  }
+}
