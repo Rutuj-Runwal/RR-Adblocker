@@ -1,0 +1,38 @@
+{
+  "appName": {
+    "message": "RR Adblocker",
+    "description": "Adblocker de Rutuj Runwal bloquea anuncios y rastreadores para que su navegación web sea más rápida y segura."
+  },
+  "appDesc": {
+    "message": "Adblocker de Rutuj Runwal bloquea anuncios y rastreadores para que su navegación web sea más rápida y segura.",
+    "description": "Adblocker de Rutuj Runwal bloquea anuncios y rastreadores para que su navegación web sea más rápida y segura."
+  },
+  "optionsName":{
+    "message":"Opciones de mejora",
+    "description":"Etiqueta para encabezado de página de opciones"
+  },
+  "saveOptionsPromptLabel":{
+    "message":"Asegúrate de Guardar las opciones después de los cambios.",
+    "description":"Etiqueta para aviso de opciones de guardado"
+  },
+  "advFilterLabel":{
+    "message":"Filtros avanzados[Experimental] ",
+    "description":"Etiqueta para la opción de filtro avanzado"
+  },
+  "antiprnFilterLabel":{
+    "message":"Bloqueo de contenido para adultos",
+    "description":"Etiqueta para la opción de bloqueo de contenido para adultos"
+  },
+  "suspFilterLabel":{
+    "message":"Filtros avanzados[Experimental] ",
+    "description":"Etiqueta para la opción de filtro avanzado"
+  },
+  "updateInfoLabel":{
+    "message":"Obtenga los últimos filtros de corrección rápida",
+    "description":"Etiqueta para aviso de información de actualización"
+  },
+  "aboutLabel":{
+    "message":"Su objetivo es crear una experiencia de Internet privada y segura y es completamente gratis.",
+    "description":"Etiqueta para la Sección Acerca de"
+  }
+}
