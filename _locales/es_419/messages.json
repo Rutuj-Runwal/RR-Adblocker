@@ -1,38 +1,38 @@
 {
   "appName": {
     "message": "RR Adblocker",
-    "description": "Adblocker de Rutuj Runwal bloquea anuncios y rastreadores para que su navegación web sea más rápida y segura."
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
   },
   "appDesc": {
     "message": "Adblocker de Rutuj Runwal bloquea anuncios y rastreadores para que su navegación web sea más rápida y segura.",
-    "description": "Adblocker de Rutuj Runwal bloquea anuncios y rastreadores para que su navegación web sea más rápida y segura."
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
   },
   "optionsName":{
     "message":"Opciones de mejora",
-    "description":"Etiqueta para encabezado de página de opciones"
+    "description":"Label for Options Page Heading"
   },
   "saveOptionsPromptLabel":{
     "message":"Asegúrate de Guardar las opciones después de los cambios.",
-    "description":"Etiqueta para aviso de opciones de guardado"
+    "description":"Label for save options prompt"
   },
   "advFilterLabel":{
     "message":"Filtros avanzados[Experimental] ",
-    "description":"Etiqueta para la opción de filtro avanzado"
+    "description":"Label for Advanced Filter option"
   },
   "antiprnFilterLabel":{
     "message":"Bloqueo de contenido para adultos",
-    "description":"Etiqueta para la opción de bloqueo de contenido para adultos"
+    "description":"Label for Adult Content Blocking option"
   },
   "suspFilterLabel":{
     "message":"Filtros avanzados[Experimental] ",
-    "description":"Etiqueta para la opción de filtro avanzado"
+    "description":"Label for Advanced Filter option"
   },
   "updateInfoLabel":{
     "message":"Obtenga los últimos filtros de corrección rápida",
-    "description":"Etiqueta para aviso de información de actualización"
+    "description":"Label for update info prompt"
   },
   "aboutLabel":{
-    "message":"Su objetivo es crear una experiencia de Internet privada y segura y es completamente gratis.",
-    "description":"Etiqueta para la Sección Acerca de"
+    "message":"El objetivo es crear una experiencia de internet privada y segura y es completamente gratis.",
+    "description":"Label for About Section"
   }
 }
