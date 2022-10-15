@@ -1,0 +1,38 @@
+{
+  "appName": {
+    "message": "Blocker-ul de reclame RR",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "appDesc": {
+    "message": "Blocker-ul de reclame al lui Rutuj Runwal blochează trackerii și reclamele pentru a vă face navigarea pe web mai rapidă și mai sigură.",
+    "description": "Rutuj Runwal's Adblocker blocks ads and trackers to make your web surfing faster and safer."
+  },
+  "optionsName":{
+    "message":"Opțiuni pentru îmbunătățire",
+    "description":"Label for Options Page Heading"
+  },
+  "saveOptionsPromptLabel":{
+    "message":"Asigurați-vă că salvați setările modificate.",
+    "description":"Label for save options prompt"
+  },
+  "advFilterLabel":{
+    "message":"Filtre Avansate [Experimental] ",
+    "description":"Label for Advanced Filter option"
+  },
+  "antiprnFilterLabel":{
+    "message":"Blocare conținut pentru adulți",
+    "description":"Label for Adult Content Blocking option"
+  },
+  "suspFilterLabel":{
+    "message":"Filtre Avansate [Experimental] ",
+    "description":"Label for Advanced Filter option"
+  },
+  "updateInfoLabel":{
+    "message":"Obțineți ultimele filtre",
+    "description":"Label for update info prompt"
+  },
+  "aboutLabel":{
+    "message":"Caută să creeze o experiență sigură și privată când navigați pe internet și este complet gratuit.",
+    "description":"Label for About Section"
+  }
+}
