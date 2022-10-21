@@ -27,32 +27,44 @@ function save_options() {
     }, 750);
     if (useAdv) {
         chrome.declarativeNetRequest.updateEnabledRulesets({
-            enableRulesetIds: ["advLIST"]});}
+            enableRulesetIds: ["advLIST"]
+        });
+    }
     if (useAntiprn) {
         chrome.declarativeNetRequest.updateEnabledRulesets({
-            enableRulesetIds: ["antiprnLIST"]});}
+            enableRulesetIds: ["antiprnLIST"]
+        });
+    }
     if (useSusp) {
         chrome.declarativeNetRequest.updateEnabledRulesets({
-            enableRulesetIds: ["suspLIST"]});}
+            enableRulesetIds: ["suspLIST"]
+        });
+    }
     if (!useAdv) {
         chrome.declarativeNetRequest.updateEnabledRulesets({
-            disableRulesetIds: ["advLIST"]});}
+            disableRulesetIds: ["advLIST"]
+        });
+    }
     if (!useAntiprn) {
         chrome.declarativeNetRequest.updateEnabledRulesets({
-            disableRulesetIds: ["antiprnLIST"]});}
+            disableRulesetIds: ["antiprnLIST"]
+        });
+    }
     if (!useSusp) {
         chrome.declarativeNetRequest.updateEnabledRulesets({
-            disableRulesetIds: ["suspLIST"]});}
+            disableRulesetIds: ["suspLIST"]
+        });
+    }
 
     checkStateChanged = false;
 }
 advFilter.onclick = function () {
-    if (advFilter.checked){modal.style.display = "block";}
+    if (advFilter.checked) { modal.style.display = "block"; }
 }
 var settings = document.querySelectorAll("input[type='checkbox']");
 
 settings.forEach(element => {
-    element.onchange = () =>{
+    element.onchange = () => {
         Savebtn.classList.remove('saveBefore');
         Savebtn.classList.add('saveAfter');
     }
@@ -65,115 +77,127 @@ function restore_options() {
         suspFilter.checked = items.suspStat;
         if (items.advStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
-                enableRulesetIds: ["advLIST"]});}
+                enableRulesetIds: ["advLIST"]
+            });
+        }
         if (items.antiPrnStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
-                enableRulesetIds: ["antiprnLIST"]});}
+                enableRulesetIds: ["antiprnLIST"]
+            });
+        }
         if (items.suspStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
-                enableRulesetIds: ["suspLIST"]});}
+                enableRulesetIds: ["suspLIST"]
+            });
+        }
         if (!items.advStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
-                disableRulesetIds: ["advLIST"]});}
+                disableRulesetIds: ["advLIST"]
+            });
+        }
         if (!items.antiPrnStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
-                disableRulesetIds: ["antiprnLIST"]});}
+                disableRulesetIds: ["antiprnLIST"]
+            });
+        }
         if (!items.suspStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
-                disableRulesetIds: ["suspLIST"]});}
+                disableRulesetIds: ["suspLIST"]
+            });
+        }
     });
-    
+
 }
 span.onclick = function () {
     modal.style.display = "none";
 }
 window.onclick = function (event) {
-    if (event.target == modal) {modal.style.display = "none";}
+    if (event.target == modal) { modal.style.display = "none"; }
 }
-if(updtBtn){
-    updtBtn.onclick = function() {
+if (updtBtn) {
+    updtBtn.onclick = function () {
         var updtUrl = "https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/patch.txt";
-        try{
+        try {
             fetch(updtUrl)
-            .then(response => response.text())
-            .then(function(text){
-                let urlPatchDt = text.split("\n");
-                let patchRules = [];
-                let patchRulesId = [];
-                let id=4950;
-                if(urlPatchDt.length>2){
-                for (let i = 2; i < urlPatchDt.length; i++) {
-                    patchRulesId.push(id);
-                    if(urlPatchDt[i].includes("U: ")){
-                        var data = urlPatchDt[i].split(' ');
-                        var blockOrAllow = data[2].trim()==="A"?"allow":"block";
-                        var priorityBorA = blockOrAllow==="allow"?2:1;
-                        patchRules.push({
-                            "id": id++,
-                            "priority": priorityBorA,
-                            "action": {
-                                "type": blockOrAllow,
-                            },
-                            "condition": {
-                                "urlFilter": "||"+data[1].trim()+"^",
-                                "resourceTypes": [
-                                    "main_frame",
-                                    "sub_frame",
-                                    "script",
-                                    "xmlhttprequest",
-                                    "ping",
-                                    "csp_report",
-                                    "stylesheet",
-                                    "media",
-                                    "websocket",
-                                    "image",
-                                    "webtransport",
-                                    "webbundle",
-                                    "other"
-                                ]
+                .then(response => response.text())
+                .then(function (text) {
+                    let urlPatchDt = text.split("\n");
+                    let patchRules = [];
+                    let patchRulesId = [];
+                    let id = 4950;
+                    if (urlPatchDt.length > 2) {
+                        for (let i = 2; i < urlPatchDt.length; i++) {
+                            patchRulesId.push(id);
+                            if (urlPatchDt[i].includes("U: ")) {
+                                var data = urlPatchDt[i].split(' ');
+                                var blockOrAllow = data[2].trim() === "A" ? "allow" : "block";
+                                var priorityBorA = blockOrAllow === "allow" ? 2 : 1;
+                                patchRules.push({
+                                    "id": id++,
+                                    "priority": priorityBorA,
+                                    "action": {
+                                        "type": blockOrAllow,
+                                    },
+                                    "condition": {
+                                        "urlFilter": "||" + data[1].trim() + "^",
+                                        "resourceTypes": [
+                                            "main_frame",
+                                            "sub_frame",
+                                            "script",
+                                            "xmlhttprequest",
+                                            "ping",
+                                            "csp_report",
+                                            "stylesheet",
+                                            "media",
+                                            "websocket",
+                                            "image",
+                                            "webtransport",
+                                            "webbundle",
+                                            "other"
+                                        ]
+                                    }
+                                })
                             }
-                        })
-                    }
-                    else if (urlPatchDt[i].includes("R: ")) {
-                        console.log(urlPatchDt[i].split(' ')[1]);
-                        patchRules.push({
-                            "id": id++,
-                            "priority": 1,
-                            "action": {
-                                "type": "block",
-                            },
-                            "condition": {
-                                "regexFilter": urlPatchDt[i].split(' ')[1].trim(),
-                                "resourceTypes": [
-                                    "main_frame",
-                                    "sub_frame",
-                                    "script",
-                                    "xmlhttprequest",
-                                    "ping",
-                                    "csp_report",
-                                    "stylesheet",
-                                    "media",
-                                    "websocket",
-                                    "image",
-                                    "webtransport",
-                                    "webbundle",
-                                    "other"
-                                ]
+                            else if (urlPatchDt[i].includes("R: ")) {
+                                console.log(urlPatchDt[i].split(' ')[1]);
+                                patchRules.push({
+                                    "id": id++,
+                                    "priority": 1,
+                                    "action": {
+                                        "type": "block",
+                                    },
+                                    "condition": {
+                                        "regexFilter": urlPatchDt[i].split(' ')[1].trim(),
+                                        "resourceTypes": [
+                                            "main_frame",
+                                            "sub_frame",
+                                            "script",
+                                            "xmlhttprequest",
+                                            "ping",
+                                            "csp_report",
+                                            "stylesheet",
+                                            "media",
+                                            "websocket",
+                                            "image",
+                                            "webtransport",
+                                            "webbundle",
+                                            "other"
+                                        ]
+                                    }
+                                })
                             }
-                        })
+                        }
+                        patchRulesId = patchRulesId.slice(0, patchRulesId.length - 1);
+                        chrome.declarativeNetRequest.updateDynamicRules({
+                            addRules: patchRules,
+                            removeRuleIds: patchRulesId,
+                        });
                     }
-                }
-                patchRulesId = patchRulesId.slice(0,patchRulesId.length-1);
-                    chrome.declarativeNetRequest.updateDynamicRules({
-                        addRules: patchRules,
-                        removeRuleIds: patchRulesId,
-                    });
-                }
-                console.log(patchRules);
-                console.log(patchRulesId);
-                alert("Done! Latest filters have been applied. If you still face issues with certain website report the Bug/Issue");
-            }).catch(function(err){console.log(err);alert("Failed to get updates! Ensure you have a stable network connection.")});
-        }catch(err){
+                    console.log(patchRules);
+                    console.log(patchRulesId);
+                    alert("Done! Latest filters have been applied. If you still face issues with certain website report the Bug/Issue");
+                }).catch(function (err) { console.log(err); alert("Failed to get updates! Ensure you have a stable network connection.") });
+        } catch (err) {
             alert("Failed to get updates! Ensure you have a stable network connection.");
         }
     }
@@ -194,4 +218,33 @@ window.addEventListener('beforeunload', function (event) {
         event.preventDefault();
         event.returnValue = '';
     }
-});
+})
+
+window.onload = () => {
+    let nightMode = document.getElementsByClassName("mode")[0]
+    let lightMode = document.getElementsByClassName("mode")[1]
+    nightMode.onclick = () => {
+        toggleMode()
+    }
+    lightMode.onclick = () => {
+        toggleMode()
+    }
+}
+
+const toggleMode = () => {
+    let nightMode = document.getElementsByClassName("mode")[0]
+    let lightMode = document.getElementsByClassName("light-mode")[0]
+
+    if (nightMode.style.display == "") {
+        nightMode.style.display = "block"
+    } else {
+        nightMode.style.display = ""
+    }
+
+    if (lightMode.style.display == "") {
+        lightMode.style.display = "block"
+    } else {
+        lightMode.style.display = ""
+    }
+    document.getElementsByTagName("body")[0].classList.toggle("night-mode-style")
+}
