@@ -3,78 +3,100 @@
 
 <head>
     <title>RR Adblocker Config</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./icons/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./icons/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<body>
     <style>
-        
-        body{
+        body {
             font-size: 20px;
+            transition-duration: 400ms
         }
-        .set{
+
+        .set {
             padding: 5px;
-            margin: 5px;
+            margin: 5px
         }
+
         #modal {
             display: none;
             position: fixed;
             z-index: 1;
             padding-top: 100px;
-            left:0;
+            left: 0;
             top: 0;
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.4);
+            background-color: #000;
+            background-color: rgba(0, 0, 0, .4)
         }
+
         #modal-content {
             font-size: 16px;
             background-color: #fefefe;
             margin: auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 50%;
+            width: 50%
         }
+
         #close {
-            color: #aaaaaa;
+            color: #aaa;
             float: right;
             font-size: 28px;
-            font-weight: bold;
+            font-weight: bold
         }
+
         #close:hover,
         #close:focus {
             color: #000;
             text-decoration: none;
-            cursor: pointer;
+            cursor: pointer
         }
-        #save{
+
+        #save {
             border-radius: 20px;
             outline: none;
             font-size: 17px;
             width: 80px;
             height: 30px;
-            cursor: pointer;
-        }
-        .saveBefore{
-            border: 2px solid #0F8C44;
-            background-color: white;
-        }
-        .saveAfter{
-            background-color: #0F8C44;
-            border: none;
+            cursor: pointer
         }
 
-        #modal{
-            pointer-events: none;
+        .saveBefore {
+            border: 2px solid #0f8c44;
+            background-color: #fff
         }
 
-        #modal-content{
-            pointer-events: all;
+        .saveAfter {
+            background-color: #0f8c44;
+            border: none
         }
-        input[type='checkbox'] {
-            width:17px;
-            height:17px;
+
+        #modal {
+            pointer-events: none
         }
-        .stlBtn{
-            background-color: #0F8C44;
+
+        #modal-content {
+            pointer-events: all
+        }
+
+        input[type=checkbox] {
+            width: 17px;
+            height: 17px
+        }
+
+        .stlBtn {
+            background-color: #0f8c44;
             border: none;
             border-radius: 20px;
             outline: none;
@@ -83,25 +105,28 @@
             font-weight: 550;
             width: 300px;
             height: 30px;
-            cursor: pointer;
+            cursor: pointer
         }
+
         .stlBtn2 {
             width: 330px;
             height: 40px;
             padding: 10px 25px;
             font-weight: 600;
-            background: transparent;
+            background: rgba(0, 0, 0, 0);
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all .3s ease;
             position: relative;
             display: inline-block;
-            border-radius: 20px;
+            border-radius: 20px
         }
+
         .btn-15 {
-            background: #0F8C44;
-            color: black;
-            z-index: 1;
+            background: #0f8c44;
+            color: #000;
+            z-index: 1
         }
+
         .btn-15:after {
             position: absolute;
             content: "";
@@ -111,20 +136,29 @@
             right: 0;
             z-index: -1;
             background: #e0e5ec;
-            transition: all 0.3s ease;
-            border-radius: 20px;
+            transition: all .3s ease;
+            border-radius: 20px
         }
-        .btn-15:hover {color: #000;}
+
+        .btn-15:hover {
+            color: #000
+        }
+
         .btn-15:hover:after {
             left: 0;
-            width: 100%;
+            width: 100%
         }
-        .btn-15:active {top: 2px;}
+
+        .btn-15:active {
+            top: 2px
+        }
+
         .btn-16 {
-            background: #0F8C44;
-            color: black;
-            z-index: 1;
+            background: #0f8c44;
+            color: #000;
+            z-index: 1
         }
+
         .btn-16:after {
             position: absolute;
             content: "";
@@ -135,37 +169,44 @@
             direction: rtl;
             z-index: -1;
             background: #e0e5ec;
-            transition: all 0.3s ease;
-            border-radius: 20px;
+            transition: all .3s ease;
+            border-radius: 20px
         }
-        .btn-16:hover {color: #000;}
+
+        .btn-16:hover {
+            color: #000
+        }
+
         .btn-16:hover:after {
             left: auto;
             right: 0;
-            width: 100%;
+            width: 100%
         }
-        .btn-16:active {top: 2px;}
-        
+
+        .btn-16:active {
+            top: 2px
+        }
+
         .tooltip {
             position: relative;
             cursor: pointer;
-            display: inline-block;
+            display: inline-block
         }
 
         .tooltip::before,
         .tooltip::after {
             position: absolute;
             opacity: 0;
-            transition: all 0.3s;
-            z-index: -1;
+            transition: all .3s;
+            z-index: -1
         }
 
         .tooltip::before {
             content: "";
-            border: 10px solid transparent;
+            border: 10px solid rgba(0, 0, 0, 0);
             border-bottom-color: #000;
             top: 10px;
-            left: 10px;
+            left: 10px
         }
 
         .tooltip::after {
@@ -179,58 +220,105 @@
             color: #fff;
             top: 30px;
             left: 0;
-            white-space: nowrap;
+            white-space: nowrap
         }
 
-        .tooltip:hover::before{
+        .tooltip:hover::before {
             top: 16px;
             opacity: 1;
-            z-index: 100;
+            z-index: 100
         }
 
-        .tooltip:hover::after{
+        .tooltip:hover::after {
             top: 36px;
             opacity: 1;
-            z-index: 100;
+            z-index: 100
         }
 
-        .info {
-            width:17px;
-            height:17px;
+        .info-icon {
+            text-align: center;
+            font-size: 15px;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            padding: 1px;
+            font-weight: bold;
+            transform: translateY(-6px) scale(0.85)
         }
 
-        /*media queries to make the options page responsive on mobile devices*/
-        @media only screen and (min-width: 468px) and (max-width: 1024px) {
-            #modal + div {
-                flex-direction: column !important;
+        @media only screen and (min-width: 468px)and (max-width: 1024px) {
+            #modal+div {
+                flex-direction: column !important
             }
 
-            div[class="set"] label {
-                font-size: 1.3rem;
+            div[class=set] label {
+                font-size: 1.3rem
             }
-            #about{
-                font-size: 1.2rem;
+
+            #about {
+                font-size: 1.2rem
             }
         }
-        
+
+        .mode {
+            position: absolute;
+            right: 6px;
+            top: 6px;
+            cursor: pointer
+        }
+
+        .mode:hover {
+            transform: scale(0.95)
+        }
+
+        .mode:active {
+            transform: scale(0.9)
+        }
+
+        .mode img {
+            width: 40px
+        }
+
+        .light-mode {
+            display: none
+        }
+
+        .night-mode-style {
+            background-color: #262626;
+            color: #fff
+        }
+
+        .night-mode-style #save {
+            color: #000
+        }
+
+        .night-mode-style .saveAfter {
+            color: #fff
+        }
+
+        .night-mode-style .info-icon {
+            color: #fff;
+            border-color: #fff
+        }
+
+        .night-mode-style button {
+            color: #fff
+        }
+
+        /*# sourceMappingURL=options.min.css.map */
     </style>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="./icons/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicons/favicon-16x16.png">
-    <link rel="manifest" href="./icons/favicons/site.webmanifest">
-    <link rel="mask-icon" href="./icons/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    
-</head>
-
-<body>
+    <div class="night-mode mode" title="Activate Night mode">
+        <img src="./icons/night-mode.png" alt="night mode" width="60px">
+    </div>
+    <div class="light-mode mode" title="Activate Light mode">
+        <img src="./icons/light-mode.png" alt="light mode" width="60px">
+    </div>
     <div id="modal">
         <div id="modal-content">
             <span id="close">&times;</span>
             <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-                Note: 
+                Note:
                 <br>
                 The Advanced Filters are experimental and might break some sites.
                 <br>
@@ -246,19 +334,19 @@
                 <input type="checkbox" id="useAdv">
                 <label for="useAdv">Advanced Filters [Experimental]</label>
                 <span class="tooltip" data-tooltip="Use advanced filters (this feature is experimental)">
-                    <img class="info" src="./icons/info.png" />
+                    <div class="info-icon">i</div>
                 </span>
                 <br>
                 <input type="checkbox" id="useAntiPrn">
-                <label  for="useAntiPrn">Adult Content Blocking</label>
+                <label for="useAntiPrn">Adult Content Blocking</label>
                 <span class="tooltip" data-tooltip="Block adult pages">
-                    <img class="info" src="./icons/info.png" />
+                    <div class="info-icon">i</div>
                 </span>
                 <br>
                 <input type="checkbox" id="useSuspBlock">
-                <label  for="useSuspBlock">Suspicious Domain Blocker</label>
+                <label for="useSuspBlock">Suspicious Domain Blocker</label>
                 <span class="tooltip" data-tooltip="Block suspicious domains">
-                    <img class="info" src="./icons/info.png" />
+                    <div class="info-icon">i</div>
                 </span>
                 <!-- <br>
                 <input type="checkbox" id="browserblockTPC"> -->
@@ -269,41 +357,47 @@
                 <button id="save" class="saveBefore">Save</button>
             </div>
             <br />
-            <div style="font-size: 16px;margin-bottom: 4px;">Get the latest quick fix filters<a href="https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/FAQ.md#how-does-quick-fix-works" target="_blank" style="text-decoration:none;">[Learn More]</a></div>
+            <div style="font-size: 16px;margin-bottom: 4px;">Get the latest quick fix filters<a
+                    href="https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/FAQ.md#how-does-quick-fix-works"
+                    target="_blank" style="text-decoration:none;">[Learn More]</a></div>
             <button id="updtchk" class="stlBtn">Check for Updates</button>
         </div>
 
         <div id="about">
             <h3>About</h3>
             <div class="set">
-                RR Adblocker is an open-source browser addon that 
+                RR Adblocker is an open-source browser addon that
                 <br>
                 blocks ads and trackers to make your web surfing faster and safer.
                 <br>
                 It aims at creating a safe, private internet experience and is completely free.
                 <br>
-                <div style="margin-bottom:3% !important;">No Telemetry.<br>No "Anonymous" Usage Statistics.<br>No Donations</div>
+                <div style="margin-bottom:3% !important;">No Telemetry.<br>No "Anonymous" Usage Statistics.<br>No
+                    Donations</div>
                 Have a suggestion?
                 <br>
-                <a style="text-decoration:none;" href="https://chrome.google.com/webstore/detail/rr-adblocker/chnhdkklhnokmmcklomnlcmcdbdiaemp/review" target="_blank"><button class="stlBtn2 btn-16">Drop suggestions</button></a>
+                <a style="text-decoration:none;"
+                    href="https://chrome.google.com/webstore/detail/rr-adblocker/chnhdkklhnokmmcklomnlcmcdbdiaemp/review"
+                    target="_blank"><button class="stlBtn2 btn-16">Drop suggestions</button></a>
                 <br><br>
                 <p style="margin-bottom:7px !important;">Found a Bug/Issue?<br>Reporting Options:</p>
-                <a style="text-decoration:none;" href="https://bit.ly/rradb_git" target="_blank"><button class="stlBtn2 btn-15">Create an issue on Github</button></a>
+                <a style="text-decoration:none;" href="https://bit.ly/rradb_git" target="_blank"><button
+                        class="stlBtn2 btn-15">Create an issue on Github</button></a>
                 <br>
                 <br>
                 <a style="text-decoration:none;"
-                    href="https://chrome.google.com/webstore/detail/rr-adblocker/chnhdkklhnokmmcklomnlcmcdbdiaemp/support" target="_blank"><button class="stlBtn2 btn-16">Report through Chrome Webstore</button></a>
+                    href="https://chrome.google.com/webstore/detail/rr-adblocker/chnhdkklhnokmmcklomnlcmcdbdiaemp/support"
+                    target="_blank"><button class="stlBtn2 btn-16">Report through Chrome Webstore</button></a>
                 <div style="margin-top: 20px !important;font-size:7px;display: none;" id="linkCredit">
-                    <a target="_blank" href="https://icons8.com/icon/2969/settings">Settings</a> icon by <a target="_blank"
-                        href="https://icons8.com">Icons8</a>
-                        
+                    <a target="_blank" href="https://icons8.com/icon/2969/settings">Settings</a> icon by <a
+                        target="_blank" href="https://icons8.com">Icons8</a>
+
                 </div>
                 <br>
                 <br>Contributions:</p>
-                <a href="https://github.com/Rutuj-Runwal/RR-Adblocker/issues"
-                target="_blank">
+                <a href="https://github.com/Rutuj-Runwal/RR-Adblocker/issues" target="_blank">
                     <button class="stlBtn2 btn-15">Start Contributing</button>
-                    
+
                 </a>
                 <br>
                 <br>
