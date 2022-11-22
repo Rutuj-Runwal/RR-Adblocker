@@ -7,5 +7,5 @@ U: trackersimulator.org B
 R: .*/zig.js B
 U: do-not-tracker.org B
 U: pubmatic.com A
-U: pubmatic.com/wp-content/cache/min/1/214e3d616adcaac4860620f5b943f44b.css A
+U: republicservices.com A
 U: d3e54v103j8qbb.cloudfront.net A
