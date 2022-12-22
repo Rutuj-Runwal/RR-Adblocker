@@ -11,5 +11,5 @@ U: republicservices.com A
 U: d3e54v103j8qbb.cloudfront.net A
 U: d2r1yp2w7bby2u.cloudfront.net/js/a.js A
 U: onetrust.com/ A
-U: mobiquitytechnologies.com/ B
+U: mobiquitytechnologies.com/ A
 U: www.onetrust.com/wp-content A
