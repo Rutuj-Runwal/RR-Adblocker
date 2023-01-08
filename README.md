@@ -16,7 +16,9 @@
 <p align="center">
 <a href="https://bit.ly/rradb_chrome"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/chrome.png" alt="RR Adblocker for Chrome"></a>
 <a href="https://bit.ly/rr-adblocker_microsoft-edge"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/edge.png" alt="Get RR Adblocker for Microsoft Edge"></a>
-<a href="https://mzl.la/3BhY6C9"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox"></a> 
+<a href="https://mzl.la/3BhY6C9"><img src="https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/firefox.png" alt="Get RR Adblocker for Firefox"></a>
+<br><br>
+<a href="https://www.producthunt.com/posts/rr-adblocker?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-rr&#0045;adblocker" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=374130&theme=neutral" alt="RR&#0032;Adblocker - &#0032;RR&#0032;Adblocker&#0032;provides&#0032;a&#0032;Lightning&#0032;Fast&#0032;Browsing&#0032;Experience | Product Hunt" style="width: 250px; height: 54px;" width="150" height="30" /></a>
 </p>
 
 ***
