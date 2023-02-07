@@ -13,3 +13,4 @@ U: d2r1yp2w7bby2u.cloudfront.net/js/a.js A
 U: onetrust.com/ A
 U: mobiquitytechnologies.com/ A
 U: www.onetrust.com/wp-content A
+U: blog.logrocket.com A
