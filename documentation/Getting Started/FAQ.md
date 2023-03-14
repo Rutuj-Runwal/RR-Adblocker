@@ -16,23 +16,34 @@
 
 ## FAQ
 
-#### What is RR Adblocker?
+### What is RR Adblocker?
 RR Adblocker is the world's first free and open-source browser extension based on Manifest V3 that blocks ads and trackers to make your web surfing faster and safer. 
 
-#### What are Advanced Filters?
+### What are Advanced Filters?
 Advanced filters are advanced tracking protection mechanisms that employ new technologies such as regular expression based filtering and will soon apply deeplearning based classification to enhance privacy by blocking and limiting modern tracking methods
 These filters provide a higher level of privacy but are experimental and should be disabled if you are having issues with any website.
 
-#### What is Adult Content Blocking(ACB)?
+### What is page load speed?
+Page load time is the time it takes for a page to load, measured from navigation start to the start of the load event.
+<br>
+We use the new [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/) interface to measure the page loading speeds and deploy several techniques to optimize the page loading speeds for fast browsing experience.
+
+### Why is page load speed value different for the same website?
+RR Adblocker(when enabled) optimizes page loading speeds and there is a measurable difference between RR Adblocker off vs on speeds.Users will experience a faster browser experience with quick load times. According to MDN, page loading speeds can vary greatly between users depending on device capabilities, network conditions, and, to a lesser extent, distance from the server. [[Reference]](https://w3c.github.io/navigation-timing/)
+<br>
+Regardless of the conditions RR Adblocker provides an optimized experience
+
+### What is Adult Content Blocking(ACB)?
 ACB is aimed towards blocking NSFW content including but not limited to Images,Videos,iframe embeds,GIF's using regular expression and will soon apply Natural Language Processing(NLP) based detection and blocking.
 
-#### What is Suspicious Domain Blocker?
+### What is Suspicious Domain Blocker?
 Suspicious Domain Blocker blocks suspicious Top-Level Domains that are suspected of malicious activity.
 
-#### How Suspicious Domain Blocking works?
+### How Suspicious Domain Blocking works?
 The current implementation of Suspicious domain blocking blocks TLD's based on inferences from a dataset with over 10,000+ malicious urls gathered from across the globe sorted on the basis of highest occurence of malware.
 <br>
 [Inference 1](https://unit42.paloaltonetworks.com/top-level-domains-cybercrime/)
+<br>
 [Inference 2](https://www.spamhaus.org/statistics/tlds/)
 <br>
 Suspicious domain blocking will soon employ tensorflow based classification for detecting and blocking suspicious urls.
@@ -41,6 +52,6 @@ Suspicious domain blocking will soon employ tensorflow based classification for 
 <br>
 [Reference](https://www.kaggle.com/code/siddharthkumar25/detect-malicious-url-using-ml/notebook)
   
-#### How does quick fix works?
-RR Adblocker applies dynamic quick fix rules fetched directly from host. These dynamic rules can provide easy and quick fixes for any sites breakage.
+### How does quick fix works?
+RR Adblocker applies dynamic quick fix rules fetched directly from host on a click of a button. These dynamic rules can provide easy and quick fixes for any sites breakage.
 If you are stiil facing issues with a website please create a github issue or report here via chrome webstore: [Click Here](https://chrome.google.com/webstore/detail/rr-adblocker/chnhdkklhnokmmcklomnlcmcdbdiaemp/support)
