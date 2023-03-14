@@ -9,7 +9,7 @@
         {
           "id": "blockLIST",
           "enabled": true,
-          "path": "legacy_filters.json"
+          "path": "default.json"
         },
         {
           "id": "advLIST",
