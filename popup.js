@@ -6,6 +6,19 @@ var statsCount = document.getElementById("showStatistics");
 var optionsSetting = document.getElementById("Openoptions");
 var ticks = document.querySelectorAll(".tick");
 var crosses = document.querySelectorAll(".cross");
+
+var acc = document.getElementById("accordion")
+var panel = document.getElementById("panel");
+
+acc.addEventListener("click", function () {
+  this.classList.toggle("active");
+  if (panel.style.display === "block") {
+    panel.style.display = "none";
+  } else {
+    panel.style.display = "block";
+  }
+});
+
 function disableDNR() {
   chrome.declarativeNetRequest.updateEnabledRulesets({
     disableRulesetIds: ["blockLIST"],
@@ -83,8 +96,20 @@ chrome.storage.local.get(['tabIDStr'], function (result) {
   var impUrlArray = result.tabIDStr;
   if (impUrlArray != undefined) {
     statsCount.innerText = impUrlArray.length;
+    var table = document.getElementById("blockedDomains");
+    for (let i = 0; i < impUrlArray.length; i++) {
+      var row = table.insertRow(table.rows.length);
+      var cellData = row.insertCell(0);
+      cellData.innerText = impUrlArray[i];
+    }
   }
 });
+chrome.storage.local.get(['loadSpeed'], (result)=>{
+  if(result.loadSpeed !=undefined){
+    var speedDiv = document.getElementById("pgLoadSpeed");
+    speedDiv.innerText = Number.parseFloat(result.loadSpeed/1000).toFixed(2) + " secs";
+  }
+})
 
 myShield.addEventListener("change", function () {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -108,7 +133,7 @@ myShield.addEventListener("change", function () {
         });
       }
       else{
-        if (disabled[domain]==true) { // Disable Blocking
+        if (disabled[domain]==true){ // Disable Blocking
           myShield.checked = false;
           indvShield.classList.add("pause");
           crosses.forEach(cross => {

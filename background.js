@@ -1,42 +1,7 @@
-function disableDNR() {
-    chrome.declarativeNetRequest.updateEnabledRulesets({
-        disableRulesetIds: ["blockLIST"],
-    });
-}
-setInterval(() => {
-    chrome.storage.sync.get(['advStat', 'antiPrnStat', 'suspStat'], function (items) {
-        if (items.advStat) {
-            chrome.declarativeNetRequest.updateEnabledRulesets({
-                enableRulesetIds: ["advLIST"],
-            });
-        }
-        if (items.antiPrnStat){
-            chrome.declarativeNetRequest.updateEnabledRulesets({
-                enableRulesetIds: ["antiprnLIST"],
-            });
-        }
-        if (items.suspStat){
-            chrome.declarativeNetRequest.updateEnabledRulesets({
-                enableRulesetIds: ["suspLIST"],
-            });
-        }
-        else if(!items.advStat){
-            chrome.declarativeNetRequest.updateEnabledRulesets({
-                disableRulesetIds: ["advLIST"],
-            });
-        }
-        else if (!items.antiPrnStat) {
-            chrome.declarativeNetRequest.updateEnabledRulesets({
-                disableRulesetIds: ["antiprnLIST"],
-            });
-        }
-        else if (!items.suspStat) {
-            chrome.declarativeNetRequest.updateEnabledRulesets({
-                disableRulesetIds: ["suspLIST"],
-            });
-        }
-    });
-}, 10);
+// TODO: Optimize code to fix a bug in chromium that stops or pauses the service worker after a while
+// https://bugs.chromium.org/p/chromium/issues/detail?id=1152255
+// https://groups.google.com/a/chromium.org/g/chromium-extensions/c/POU6sW-I39M/m/PljS3_zbAgAJ
+chrome.declarativeNetRequest.setExtensionActionOptions({ displayActionCountAsBadgeText: true });
 
 chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     if(tabs[0]!=undefined){
@@ -45,28 +10,13 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         var domain = tabs[0].url.split("/")[2];
         chrome.runtime.onMessage.addListener(
             function (response, sender, sendResponse) {
-                chrome.storage.local.set({ tabIDStr: response });
+                if(response.blockedItems){
+                    chrome.storage.local.set({ tabIDStr: response.blockedItems });
+                }else{
+                    chrome.storage.local.set({ loadSpeed: response.speed });
+                }
             }
         );
-        chrome.storage.sync.get('*', function (disabled) {
-            chrome.storage.sync.get(domain, function (disabled) {
-                if(disabled[domain]==undefined){
-                    chrome.declarativeNetRequest.updateEnabledRulesets({
-                        enableRulesetIds: ["blockLIST"],
-                    });
-                }
-                else{
-                    if (disabled[domain]==true) { // Disable Blocking
-                        disableDNR();
-                    }
-                    else { // Enable Blocking 
-                        chrome.declarativeNetRequest.updateEnabledRulesets({
-                            enableRulesetIds: ["blockLIST"],
-                        });
-                    }
-                }
-            });
-        });
     }
 });
 const urlHaus = "https://malware-filter.gitlab.io/malware-filter/urlhaus-filter-online.txt";

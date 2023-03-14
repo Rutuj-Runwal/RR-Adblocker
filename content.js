@@ -2,6 +2,12 @@ var browser = (window.browser) ? window.browser : window.chrome;
 var url = window.location.hostname + window.location.pathname;
 var last = url.slice(-1);
 
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    chrome.runtime.sendMessage({ 'speed': window.performance.getEntriesByType("navigation")[0].loadEventEnd});
+  }, 0);
+});
+
 if (last != '/' && url != "secure.eicar.org/eicar.com.txt") {
   url = url + '/';
 }
@@ -102,8 +108,7 @@ else {
 }
 
 const urlData = [...urlDataSet];
-chrome.runtime.sendMessage(urlData);
-
+chrome.runtime.sendMessage({'blockedItems':urlData});
 var domain = document.location.hostname;
 chrome.storage.sync.get('*', function (disabled) {
   if (disabled['*']) return;

@@ -81,28 +81,13 @@
         .cross{width: 25px;height: 22px;}
         /* Switch css end */
         #showDomain{
-            margin-top: 2px;
-            margin-bottom: 20px;
             border-radius: 10px;
             width: 230px;
             height: max-content;
             padding: 3px;
             text-align: center;
-            font-size: 110% !important;
             margin-top: 10px !important;
             margin-bottom: 10px !important;
-        }
-        #showStatDiv{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-        #showStatDiv{
-            cursor: pointer;
-        }
-        #displaySite{
-            text-decoration: none;
         }
         #Openoptions{
             float: right;
@@ -112,14 +97,107 @@
             padding-right: 7px !important;
             margin-top: 8px !important;
         }
+        /* Accordian Start */
+        .flexCenter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #accordion {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: white;
+            transition: 2s;
+        }
+        #panel {
+            display: none;
+        }
+        #blockedDomains{
+            background-color: aquamarine;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 13px;
+            table-layout: fixed;
+            width: 220px;
+            height: auto;
+        }
+        td {
+            border-bottom: 1px solid #BCBCBC;
+            word-wrap: break-word;
+        }
+        .noScroll{
+            width: 220px;
+            height:70px !important;
+            overflow-x:hidden;
+            overflow-y: scroll;
+        }
+        .noScroll::-webkit-scrollbar{
+            display: none;
+        }
+        /* Accordian End */
+        /* Tooltip start */
+        .tooltip {
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .tooltip::before,
+        .tooltip::after {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: -1;
+        }
+
+        .tooltip::before {
+            content: "";
+            border: 10px solid transparent;
+            border-bottom-color: #000;
+            top: 10px;
+            left: 10px;
+        }
+
+        .tooltip::after {
+            content: attr(data-tooltip);
+            display: block;
+            padding: 7px 13px;
+            background: #000;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #fff;
+            top: 30px;
+            left: 0;
+            white-space: nowrap;
+        }
+
+        .tooltip:hover::before{
+            top: 16px;
+            opacity: 1;
+            z-index: 100;
+        }
+
+        .tooltip:hover::after{
+            top: 36px;
+            opacity: 1;
+            z-index: 100;
+        }
+
+        .info {
+            width:17px;
+            height:17px;
+        }
+        /* Tooltip end */
         
     </style>
 </head>
 
-<body >
+<body>
     <!-- "Intro" -->
     <div>
-        <div id="Openoptions" style="display: flex;flex-direction: column;float: right;align-items: center;justify-content: center;"><img src="./settings.png" ><span style="font-size: 11px;">Settings</span></div>
+        <div id="Openoptions" class="flexCenter" style="flex-direction: column;float: right;"><img src="./settings.png" ><span style="font-size: 11px;">Settings</span></div>
         <a href="#"
             style="text-decoration:none;display: flex; align-items: center;justify-content: center;color: black;cursor: default;">
             <img src="./RR_logo.png" alt="Logo" style="width: 50px;height: 70px;">
@@ -128,67 +206,58 @@
     </div>
     <br>
     <!-- All Shields: ON/OFF -->
-    <div style="display: flex; align-items: center;justify-content: center;">
+    <div class="flexCenter">
         <label class="switch">
             <input type="checkbox" id="site_link" checked>
             <span class="slider round"></span>
         </label>
     </div>
     <br>
-    <div id="showStatDiv">
-        <div >
-            <a id="displaySite" href="./showBlocked.html">
-                <span id="showStatistics" style="font-size: 205% !important;">3</span><span style="font-size: 115% !important;">
-                    items blocked</span>
-            </a>
+    <div class="flexCenter" style="flex-direction:column;">
+        <button id="accordion">
+            <span id="showStatistics" style="font-size: 205% !important;">3</span>
+            <span style="font-size: 115% !important;">items blocked</span>
+        </button>
+        <div id="panel" class="noScroll">
+            <div class="noScroll" class="flexCenter" style="flex-direction: column;">
+                <table id="blockedDomains"></table>
+            </div>
+        </div>
+        <div id="showDomain" style="font-size: 125% !important;"><span style="color: #ccc;">Domain:</span>
         </div>
     </div>
-
-    <div id="showDomain" style="font-size: 125% !important;"><span style="color: #ccc;">Domain:</span></div>
 
     <!-- Individual Shields : ON/OFF -->   
     <div id="individualShields">
         <!-- 1st: Connection Upgrade to HTTPS -->
-        <div style="display: flex;align-items: center;justify-content: center;">
+        <div class="flexCenter">
             <span style="font-size: 115% !important;">Connection Upgrade to HTTPS&nbsp;</span>
-            <!-- <label class="switch">
-                <input type="checkbox" id="httpUpgrade" checked>
-                <span class="slider round"></span>
-            </label> -->
             <img src="./icons/tick.jpg" class="tick" alt="on">
             <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off" >
         </div>
         <br>
         <!-- 2nd: Block ads and Trackers -->
-        <div style="display: flex;align-items: center;justify-content: center;">
+        <div class="flexCenter">
             <span style="font-size: 115% !important;">Block Trackers and Adverts &nbsp;</span>
-            <!-- <label class="switch">
-                <input type="checkbox" id="trackerBlock" checked>
-                <span class="slider round"></span>
-            </label> -->
             <img src="./icons/tick.jpg" class="tick" alt="on">
             <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off">
         </div>
         <br>
         <!-- 3rd: Malware protection -->
-        <div style="display: flex;align-items: center;justify-content: center;">
+        <div class="flexCenter">
             <span style="font-size: 115% !important;">Malware Protection[BETA] &nbsp;</span>
-            <!-- <label class="switch">
-                <input type="checkbox" id="webBlock" checked>
-                <span class="slider round"></span>
-            </label> -->
             <img src="./icons/tick.jpg" class="tick" alt="on" >
             <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off" >
         </div>
+        <div class="flexCenter">
+            <p id="pgLoadSpeed" class="tooltip" data-tooltip="Optimized load speed" style="text-align: center;color: #087034;font-weight:700;font-size: 15px;"></p>
+        </div>
     </div>
     <br>
-    <!-- <table id="blockedDomains" style="display: none;"></table> -->
 
     <div>
         <p style="text-align: center;">
             You are protected against trackers and ads!
-            <!-- <br> -->
-            <!-- <a href="https://bit.ly/let_us_connect" target="blank">Learn More</a> -->
         </p>
     </div>
     <script src="popup.js"></script>
