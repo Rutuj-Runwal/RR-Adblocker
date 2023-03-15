@@ -65,6 +65,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
           myShield.checked = false;
           showDomainDiv.style.backgroundColor = "#2196F3";
           speedDiv.style.color = "#ED1B24";
+          speedDiv.setAttribute("data-tooltip", "Not optimized");
           indvShield.classList.add("pause");
           crosses.forEach(cross => {
             cross.classList.remove("hideNDisable");
@@ -148,6 +149,7 @@ myShield.addEventListener("change", function () {
           });
           showDomainDiv.style.backgroundColor = "#2196F3";
           speedDiv.style.color = "#ED1B24";
+          speedDiv.setAttribute("data-tooltip","Not optimized");
           statsCount.innerText = "0 ";
           disableDNR();
           chrome.tabs.reload(currtab.id);
@@ -163,6 +165,7 @@ myShield.addEventListener("change", function () {
           });
           showDomainDiv.style.backgroundColor = "#0F8C44";
           speedDiv.style.color = "#087034";
+          speedDiv.setAttribute("data-tooltip", "Optimized load speed");
           chrome.declarativeNetRequest.updateEnabledRulesets({
             enableRulesetIds: ["blockLIST"],
           });
