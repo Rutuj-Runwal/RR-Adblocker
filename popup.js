@@ -6,7 +6,7 @@ var statsCount = document.getElementById("showStatistics");
 var optionsSetting = document.getElementById("Openoptions");
 var ticks = document.querySelectorAll(".tick");
 var crosses = document.querySelectorAll(".cross");
-
+var speedDiv = document.getElementById("pgLoadSpeed");
 var acc = document.getElementById("accordion")
 var panel = document.getElementById("panel");
 
@@ -55,6 +55,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
           tick.classList.remove("hideNDisable");
         });
         showDomainDiv.style.backgroundColor = "#0F8C44";
+        speedDiv.style.color = "#087034";
         chrome.declarativeNetRequest.updateEnabledRulesets({
           enableRulesetIds: ["blockLIST"],
         });
@@ -63,6 +64,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         if (disabled[domain]) { // Disable Blocking
           myShield.checked = false;
           showDomainDiv.style.backgroundColor = "#2196F3";
+          speedDiv.style.color = "#ED1B24";
           indvShield.classList.add("pause");
           crosses.forEach(cross => {
             cross.classList.remove("hideNDisable");
@@ -76,6 +78,7 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         else { // Enable Blocking 
           myShield.checked = true;
           showDomainDiv.style.backgroundColor = "#0F8C44";
+          speedDiv.style.color = "#087034";
           indvShield.classList.remove("pause");
           crosses.forEach(cross => {
             cross.classList.add("hideNDisable");
@@ -106,7 +109,6 @@ chrome.storage.local.get(['tabIDStr'], function (result) {
 });
 chrome.storage.local.get(['loadSpeed'], (result)=>{
   if(result.loadSpeed !=undefined){
-    var speedDiv = document.getElementById("pgLoadSpeed");
     speedDiv.innerText = Number.parseFloat(result.loadSpeed/1000).toFixed(2) + " secs";
   }
 })
@@ -128,6 +130,7 @@ myShield.addEventListener("change", function () {
           tick.classList.remove("hideNDisable");
         });
         showDomainDiv.style.backgroundColor = "#0F8C44";
+        speedDiv.style.color = "#087034";
         chrome.declarativeNetRequest.updateEnabledRulesets({
           enableRulesetIds: ["blockLIST"],
         });
@@ -143,6 +146,7 @@ myShield.addEventListener("change", function () {
             tick.classList.add("hideNDisable");
           });
           showDomainDiv.style.backgroundColor = "#2196F3";
+          speedDiv.style.color = "#ED1B24";
           statsCount.innerText = "0 ";
           disableDNR();
           chrome.tabs.reload(currtab.id);
@@ -157,6 +161,7 @@ myShield.addEventListener("change", function () {
             tick.classList.remove("hideNDisable");
           });
           showDomainDiv.style.backgroundColor = "#0F8C44";
+          speedDiv.style.color = "#087034";
           chrome.declarativeNetRequest.updateEnabledRulesets({
             enableRulesetIds: ["blockLIST"],
           });
