@@ -23,7 +23,7 @@ RR Adblocker is the world's first free and open-source browser extension based o
 Advanced filters are advanced tracking protection mechanisms that employ new technologies such as regular expression based filtering and will soon apply deeplearning based classification to enhance privacy by blocking and limiting modern tracking methods
 These filters provide a higher level of privacy but are experimental and should be disabled if you are having issues with any website.
 
-### What is page load speed?
+### What is Page Load Speed(PGL/PGS)?
 Page load time is the time it takes for a page to load, measured from navigation start to the start of the load event.
 <br>
 We use the new [Navigation Timing Level 2](https://w3c.github.io/navigation-timing/) interface to measure the page loading speeds and deploy several techniques to optimize the page loading speeds for fast browsing experience.
@@ -32,6 +32,9 @@ We use the new [Navigation Timing Level 2](https://w3c.github.io/navigation-timi
 RR Adblocker(when enabled) optimizes page loading speeds and there is a measurable difference between RR Adblocker off vs on speeds.Users will experience a faster browser experience with quick load times. According to MDN, page loading speeds can vary greatly between users depending on device capabilities, network conditions, and, to a lesser extent, distance from the server. [[Reference]](https://w3c.github.io/navigation-timing/)
 <br>
 Regardless of the conditions RR Adblocker provides an optimized experience
+
+### On X website, why is the PGL value better when the extension is off?
+On some dynamically loading websites the on vs off speeds may be similar due to their dynamic loading nature and caching of resources.This is optimal as RR Adblocker perofrms additional processing to block trackers and ads.
 
 ### What is Adult Content Blocking(ACB)?
 ACB is aimed towards blocking NSFW content including but not limited to Images,Videos,iframe embeds,GIF's using regular expression and will soon apply Natural Language Processing(NLP) based detection and blocking.
