@@ -114,6 +114,7 @@ chrome.storage.local.get(['loadSpeed'], (result)=>{
 })
 
 myShield.addEventListener("change", function () {
+  speedDiv.innerText = "Calculating...";
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     var domain = tabs[0].url.split("/")[2];
     myShield.checked ? disabled[domain] = false : disabled[domain] = true;
@@ -169,5 +170,12 @@ myShield.addEventListener("change", function () {
         }
       }
     });
+  });
+  chrome.storage.local.onChanged.addListener((changes, namespace) => {
+    if (changes?.loadSpeed?.newValue) {
+      setTimeout(() => {
+        speedDiv.innerText = Number.parseFloat(changes.loadSpeed.newValue/1000).toFixed(2) + " secs";
+      }, 500);
+    }
   });
 });
