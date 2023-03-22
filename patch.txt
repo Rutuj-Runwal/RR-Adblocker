@@ -14,3 +14,4 @@ U: onetrust.com/ A
 U: www.onetrust.com/wp-content A
 U: blog.logrocket.com A
 U: d157777v0iph40.cloudfront.net A
+U: cryptonews.net/upload/adv/detail/ B
