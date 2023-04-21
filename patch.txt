@@ -8,3 +8,4 @@ R: .*/zig.js B
 U: do-not-tracker.org B
 U: cryptonews.net/upload/adv/detail B
 U: weather.us/js/ads.js A
+U: cyber-sale.com B
