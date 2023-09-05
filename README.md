@@ -27,9 +27,29 @@ RR Adblocker is an open-source browser extension and the world's first published
 
 Out of the box, the extension blocks ads, trackers and malware sites and is powered by [_EasyList_](https://easylist.github.io/#easylist), [_EasyPrivacy_](https://easylist.github.io/#easyprivacy), [_Online Malicious URL Blocklist_](https://gitlab.com/curben/urlhaus-filter#urlhaus-malicious-url-blocklist)
 
-![User iterface](https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/assets/1.png)
+# RR Adblocker End Of Life
+![RR Adblocker EOL Roadmap](https://raw.githubusercontent.com/Rutuj-Runwal/RR-Adblocker/main/assets/RR%20Adblocker%20EOL.png)
+- Due to ever evolving ad-tech and heavy dependence of  static rulesets and filters in current architecture
+- The last update v0.2 to RR Adblocker will come in late 2024.
+- The new project "RR Privacy" will allow for a more faster and seamless privacy experience
+- Thanks to all the contributors for making this project better!
 
-## Features Include:
+## A few RR Adblocker Achievements:
+- World's first deployed adblocker built on Manfiest Version 3 (Published in Microsoft's Addon Store: Feb-2022, Chrome Web Store: Jun-2022)
+- The only MV3 adblocking extension till date to include an dynamic update/"Check for update" functionality based on DnR dynamic rulesets
+- Only MV3 adblocking extension to include a urls blocked listing
+- Peak users: 5000+ across all browsers and platforms
+
+<br>
+
+## Check out RR Privacy - COMING SOON
+  
+![RR Privacy Coming Soon](https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/assets/RR%20Privacy%20Proposal.png)
+
+
+<br>
+
+## RR Adblocker's Features Include:
 - Trackers Blocking
 - Adverts Blocking
 - Malware Protection[BETA]
@@ -38,7 +58,7 @@ Out of the box, the extension blocks ads, trackers and malware sites and is powe
 
 ### Advert and Trackers blocking
 
-To test the advert and trackers blocking feature head over to any website of your choice that contains ads.
+#### To test the advert and trackers blocking feature head over to any website of your choice that contains ads.
 Here we have used https://www.speedtest.net/ to demonstrate
 
 #### When the extension is enabled
@@ -70,6 +90,7 @@ Check out the getting started guide: https://bit.ly/rr-gettingStarted
 - HTTPS upgrade: [EFF](https://github.com/EFForg/https-everywhere/tree/master/docs)
 
 ## Contributors
+*I am thankful for your valuable contribution*
 
 <a href = "https://github.com/Rutuj-Runwal/RR-Adblocker/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=Rutuj-Runwal/RR-Adblocker"/>
