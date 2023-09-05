@@ -42,7 +42,7 @@ Out of the box, the extension blocks ads, trackers and malware sites and is powe
 
 <br>
 
-## Check out RR Privacy - COMING SOON
+## Check out RR Privacy [HERE](https://github.com/Rutuj-Runwal/RR-Privacy/blob/main/README.md) - COMING SOON
   
 ![RR Privacy Coming Soon](https://github.com/Rutuj-Runwal/RR-Adblocker/blob/main/assets/RR%20Privacy%20Proposal.png)
 
