@@ -99,7 +99,9 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
 chrome.storage.local.get(['tabIDStr'], function (result) {
   var impUrlArray = result.tabIDStr;
   if (impUrlArray != undefined) {
-    statsCount.innerText = impUrlArray.length;
+    chrome.action.getBadgeText({tabId:currtabID},(badgetext) => {
+      statsCount.innerText = badgetext;
+    })
     var table = document.getElementById("blockedDomains");
     for (let i = 0; i < impUrlArray.length; i++) {
       var row = table.insertRow(table.rows.length);
@@ -174,7 +176,9 @@ myShield.addEventListener("change", function () {
           chrome.storage.local.get(['tabIDStr'], function (result) {
             var impUrlArray = result.tabIDStr;
             if (impUrlArray != undefined) {
-              statsCount.innerText = impUrlArray.length;
+              chrome.action.getBadgeText({tabId: tabs[0].id}, (badgetext) => {
+                statsCount.innerText = badgetext;
+              })
               var table = document.getElementById("blockedDomains");
               table.innerText = "";
               for (let i = 0; i < impUrlArray.length; i++) {
