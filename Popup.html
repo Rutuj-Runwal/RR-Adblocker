@@ -15,8 +15,13 @@
             --slider-height: calc(var(--switch-height) - var(--switch-padding));
             --slider-on: calc(var(--switch-height) - var(--switch-padding));
         }
-        *{
+
+        * {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        body {
+            width: 230px !important;
         }
 
         .switch {
@@ -75,21 +80,37 @@
         .slider.round:before {
             border-radius: 50%;
         }
-        .pause{opacity: 0.5;}
-        .hideNDisable{display: none;}
-        .tick{width: 25px;height: 20px;}
-        .cross{width: 25px;height: 22px;}
+
+        .pause {
+            opacity: 0.5;
+        }
+
+        .hideNDisable {
+            display: none;
+        }
+
+        .tick {
+            width: 25px;
+            height: 20px;
+        }
+
+        .cross {
+            width: 25px;
+            height: 22px;
+        }
+
         /* Switch css end */
-        #showDomain{
+        #showDomain {
             border-radius: 10px;
-            width: 230px;
+            width: 230px !important;
             height: max-content;
             padding: 3px;
             text-align: center;
             margin-top: 10px !important;
             margin-bottom: 10px !important;
         }
-        #Openoptions{
+
+        #Openoptions {
             float: right;
             width: 15px !important;
             height: 15px !important;
@@ -97,12 +118,14 @@
             padding-right: 7px !important;
             margin-top: 8px !important;
         }
+
         /* Accordian Start */
-        .flexCenter{
+        .flexCenter {
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
         #accordion {
             cursor: pointer;
             border: none;
@@ -110,10 +133,12 @@
             background-color: white;
             transition: 2s;
         }
+
         #panel {
             display: none;
         }
-        #blockedDomains{
+
+        #blockedDomains {
             background-color: aquamarine;
             border-radius: 10px;
             padding: 5px;
@@ -122,19 +147,23 @@
             width: 220px;
             height: auto;
         }
+
         td {
             border-bottom: 1px solid #BCBCBC;
             word-wrap: break-word;
         }
-        .noScroll{
+
+        .noScroll {
             width: 220px;
-            height:70px !important;
-            overflow-x:hidden;
+            height: 70px !important;
+            overflow-x: hidden;
             overflow-y: scroll;
         }
-        .noScroll::-webkit-scrollbar{
+
+        .noScroll::-webkit-scrollbar {
             display: none;
         }
+
         /* Accordian End */
         /* Tooltip start */
         .tooltip {
@@ -173,35 +202,34 @@
             white-space: nowrap;
         }
 
-        .tooltip:hover::before{
+        .tooltip:hover::before {
             top: 16px;
             opacity: 1;
             z-index: 100;
         }
 
-        .tooltip:hover::after{
+        .tooltip:hover::after {
             top: 36px;
             opacity: 1;
             z-index: 100;
         }
 
         .info {
-            width:17px;
-            height:17px;
+            width: 17px;
+            height: 17px;
         }
+
         /* Tooltip end */
-        
     </style>
 </head>
 
 <body>
     <!-- "Intro" -->
     <div>
-        <div id="Openoptions" class="flexCenter" style="flex-direction: column;float: right;"><img src="./settings.png" ><span style="font-size: 11px;">Settings</span></div>
-        <a href="#"
-            style="text-decoration:none;display: flex; align-items: center;justify-content: center;color: black;cursor: default;">
-            <img src="./RR_logo.png" alt="Logo" style="width: 50px;height: 70px;">
-            <span>Adblocker!</span>
+        <div id="Openoptions" class="flexCenter" style="flex-direction: column;float: right;"><img
+                src="./settings.png"><span style="font-size: 11px;">Settings</span></div>
+        <a href="#" class="flexCenter" style="text-decoration:none;color: black;cursor: default;">
+            <img src="./RR_logo.png" alt="Logo" style="width: 50px;height: 70px;"><span>Adblocker!</span>
         </a>
     </div>
     <br>
@@ -215,8 +243,8 @@
     <br>
     <div class="flexCenter" style="flex-direction:column;">
         <button id="accordion">
-            <span id="showStatistics" style="font-size: 205% !important;">3</span>
-            <span style="font-size: 115% !important;">items blocked</span>
+            <span id="showStatistics" style="font-size: 205% !important;color: blue;">3</span>
+            <span style="font-size: 115% !important;color: blue;">items blocked</span>
         </button>
         <div id="panel" class="noScroll">
             <div class="noScroll" class="flexCenter" style="flex-direction: column;">
@@ -227,13 +255,13 @@
         </div>
     </div>
 
-    <!-- Individual Shields : ON/OFF -->   
+    <!-- Individual Shields : ON/OFF -->
     <div id="individualShields">
         <!-- 1st: Connection Upgrade to HTTPS -->
         <div class="flexCenter">
             <span style="font-size: 115% !important;">Connection Upgrade to HTTPS&nbsp;</span>
             <img src="./icons/tick.jpg" class="tick" alt="on">
-            <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off" >
+            <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off">
         </div>
         <br>
         <!-- 2nd: Block ads and Trackers -->
@@ -246,11 +274,12 @@
         <!-- 3rd: Malware protection -->
         <div class="flexCenter">
             <span style="font-size: 115% !important;">Malware Protection[BETA] &nbsp;</span>
-            <img src="./icons/tick.jpg" class="tick" alt="on" >
-            <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off" >
+            <img src="./icons/tick.jpg" class="tick" alt="on">
+            <img src="./icons/cross.jpg" class="cross hideNDisable" alt="off">
         </div>
         <div class="flexCenter">
-            <p id="pgLoadSpeed" class="tooltip" data-tooltip="Optimized load speed" style="text-align: center;color: #087034;font-weight:700;font-size: 15px;"></p>
+            <p id="pgLoadSpeed" class="tooltip" data-tooltip="Optimized load speed"
+                style="text-align: center;color: #087034;font-weight:700;font-size: 15px;"></p>
         </div>
     </div>
     <div>
@@ -260,4 +289,5 @@
     </div>
     <script src="popup.js"></script>
 </body>
+
 </html>

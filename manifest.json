@@ -1,6 +1,6 @@
 {
     "name": "__MSG_appName__",
-    "version": "0.1.6.7",
+    "version": "0.1.87",
     "description": "__MSG_appDesc__",
     "default_locale": "en",
     "permissions": ["tabs","declarativeNetRequest", "storage"],
@@ -9,22 +9,27 @@
         {
           "id": "blockLIST",
           "enabled": true,
-          "path": "default.json"
+          "path": "/rules/default.json"
         },
         {
           "id": "advLIST",
           "enabled": false,
-          "path": "adv.json"
+          "path": "/rules/adv.json"
         },
         {
           "id": "antiprnLIST",
           "enabled": false,
-          "path": "antiprn.json"
+          "path": "/rules/antiprn.json"
         },
         {
           "id": "suspLIST",
           "enabled": false,
-          "path": "susp.json"
+          "path": "/rules/susp.json"
+        },
+        {
+          "id":"antitrackLIST",
+          "enabled":false,
+          "path":"/rules/antitrack.json"
         }
       ]
     },

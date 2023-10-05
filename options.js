@@ -4,6 +4,7 @@ var span = document.getElementById("close");
 var advFilter = document.getElementById('useAdv');
 var antiPrnFilter = document.getElementById('useAntiPrn');
 var suspFilter = document.getElementById('useSuspBlock');
+var antiTrackFilter = document.getElementById('useAntiTrack');
 var updtBtn = document.getElementById('updtchk');
 var checkStateChanged = false;
 // Saves options to chrome.storage
@@ -11,8 +12,10 @@ function save_options() {
     var useAdv = document.getElementById('useAdv').checked;
     var useAntiprn = document.getElementById('useAntiPrn').checked;
     var useSusp = document.getElementById('useSuspBlock').checked;
+    var useAntiTrack = document.getElementById('useAntiTrack').checked;
 
-    chrome.storage.sync.set({ advStat: useAdv, antiPrnStat: useAntiprn, suspStat: useSusp }, function () {
+
+    chrome.storage.sync.set({ advStat: useAdv, antiPrnStat: useAntiprn, suspStat: useSusp, antiTrackStat: useAntiTrack }, function () {
         // Update status to let user know options were saved.
         var status = document.getElementById('status');
         status.textContent = 'Options saved.';
@@ -40,6 +43,11 @@ function save_options() {
             enableRulesetIds: ["suspLIST"]
         });
     }
+    if (useAntiTrack) {
+        chrome.declarativeNetRequest.updateEnabledRulesets({
+            enableRulesetIds: ["antitrackLIST"]
+        });
+    }
     if (!useAdv) {
         chrome.declarativeNetRequest.updateEnabledRulesets({
             disableRulesetIds: ["advLIST"]
@@ -55,7 +63,11 @@ function save_options() {
             disableRulesetIds: ["suspLIST"]
         });
     }
-
+    if (!useAntiTrack) {
+        chrome.declarativeNetRequest.updateEnabledRulesets({
+            disableRulesetIds: ["antitrackLIST"]
+        });
+    }
     checkStateChanged = false;
 }
 advFilter.onclick = function () {
@@ -71,10 +83,11 @@ settings.forEach(element => {
 });
 
 function restore_options() {
-    chrome.storage.sync.get(['advStat', 'antiPrnStat', 'suspStat'], function (items) {
+    chrome.storage.sync.get(['advStat', 'antiPrnStat', 'suspStat', 'antiTrackStat'], function (items) {
         advFilter.checked = items.advStat;
         antiPrnFilter.checked = items.antiPrnStat;
         suspFilter.checked = items.suspStat;
+        antiTrackFilter.checked = items.antiTrackStat;
         if (items.advStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
                 enableRulesetIds: ["advLIST"]
@@ -90,6 +103,11 @@ function restore_options() {
                 enableRulesetIds: ["suspLIST"]
             });
         }
+        if (items.antiTrackStat) {
+            chrome.declarativeNetRequest.updateEnabledRulesets({
+                enableRulesetIds: ["antitrackLIST"]
+            });
+        }
         if (!items.advStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
                 disableRulesetIds: ["advLIST"]
@@ -103,6 +121,11 @@ function restore_options() {
         if (!items.suspStat) {
             chrome.declarativeNetRequest.updateEnabledRulesets({
                 disableRulesetIds: ["suspLIST"]
+            });
+        }
+        if (!items.antiTrackStat) {
+            chrome.declarativeNetRequest.updateEnabledRulesets({
+                disableRulesetIds: ["antitrackLIST"]
             });
         }
     });
@@ -219,32 +242,3 @@ window.addEventListener('beforeunload', function (event) {
         event.returnValue = '';
     }
 })
-
-window.onload = () => {
-    let nightMode = document.getElementsByClassName("mode")[0]
-    let lightMode = document.getElementsByClassName("mode")[1]
-    nightMode.onclick = () => {
-        toggleMode()
-    }
-    lightMode.onclick = () => {
-        toggleMode()
-    }
-}
-
-const toggleMode = () => {
-    let nightMode = document.getElementsByClassName("mode")[0]
-    let lightMode = document.getElementsByClassName("light-mode")[0]
-
-    if (nightMode.style.display == "") {
-        nightMode.style.display = "block"
-    } else {
-        nightMode.style.display = ""
-    }
-
-    if (lightMode.style.display == "") {
-        lightMode.style.display = "block"
-    } else {
-        lightMode.style.display = ""
-    }
-    document.getElementsByTagName("body")[0].classList.toggle("night-mode-style")
-}
