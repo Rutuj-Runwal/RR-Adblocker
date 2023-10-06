@@ -21,7 +21,7 @@
         }
 
         body {
-            width: 230px !important;
+            width: 280px !important;
         }
 
         .switch {
@@ -101,7 +101,7 @@
 
         /* Switch css end */
         #showDomain {
-            border-radius: 10px;
+            border-radius: 6rem;
             width: 230px !important;
             height: max-content;
             padding: 3px;
@@ -110,13 +110,21 @@
             margin-bottom: 10px !important;
         }
 
+        #showDomain {
+            font-size: 100% !important;
+            color: #fff !important;
+            padding: .5rem 1.5rem;
+            max-width: 200px !important;
+            margin-inline: auto !important;
+            overflow: hidden !important;
+        }
+
         #Openoptions {
-            float: right;
-            width: 15px !important;
-            height: 15px !important;
-            cursor: pointer;
-            padding-right: 7px !important;
-            margin-top: 8px !important;
+            flex-direction: column;
+            gap: .3rem;
+            align-items: flex-end;
+            margin-left: auto;
+            padding-right: .5rem;
         }
 
         /* Accordian Start */
@@ -132,6 +140,9 @@
             outline: none;
             background-color: white;
             transition: 2s;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
         }
 
         #panel {
@@ -226,8 +237,10 @@
 <body>
     <!-- "Intro" -->
     <div>
-        <div id="Openoptions" class="flexCenter" style="flex-direction: column;float: right;"><img
-                src="./settings.png"><span style="font-size: 11px;">Settings</span></div>
+        <div id="Openoptions" class="flexCenter">
+            <img src="./settings.png">
+            <!-- <span style="font-size: 11px;">Settings</span> -->
+        </div>
         <a href="#" class="flexCenter" style="text-decoration:none;color: black;cursor: default;">
             <img src="./RR_logo.png" alt="Logo" style="width: 50px;height: 70px;"><span>Adblocker!</span>
         </a>
@@ -251,7 +264,8 @@
                 <table id="blockedDomains"></table>
             </div>
         </div>
-        <div id="showDomain" style="font-size: 125% !important;"><span style="color: #ccc;">Domain:</span>
+        <div style="font-size: 125% !important;padding-block: .5rem;margin-block: 1rem;">
+            <span id="showDomain">Domain:</span>
         </div>
     </div>
 
